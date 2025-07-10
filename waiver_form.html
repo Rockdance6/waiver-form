@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>舞岩抱石攀岩館 責任風險承擔同意書</title>
+  <script src="https://cdn.jsdelivr.net/npm/signature_pad@4.1.5/dist/signature_pad.umd.min.js"></script>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 2em;
+      max-width: 600px;
+    }
+    label {
+      display: block;
+      margin-top: 1em;
+    }
+    canvas {
+      border: 1px solid #ccc;
+      width: 100%;
+      height: 200px;
+    }
+    button {
+      margin-top: 1em;
+    }
+  </style>
+</head>
+<body>
+  <h2>舞岩抱石攀岩館 責任風險承擔同意書</h2>
+
+  <form id="waiverForm">
+    <label>姓名：<input type="text" name="name" required></label>
+    <label>出生年月日：<input type="date" name="dob" required></label>
+    <label>手機號碼：<input type="tel" name="phone" required></label>
+    <label>緊急聯絡人：<input type="text" name="emergency_contact" required></label>
+    <label>緊急聯絡人電話：<input type="tel" name="emergency_phone" required></label>
+
+    <label>同意條款：</label>
+    <p>本人了解攀岩活動具有潛在之風險，包含但不限於跌落、撞擊、擦傷或其他不可預期之受傷情況。本人保證已詳閱場館之使用規則，並願意配戴必要之安全裝備，遵守場館人員指示。本人確認，若因個人行為、身體狀況不佳或未遵守場館規定而導致任何傷害、事故或損失，願自行承擔全部責任，並免除舞岩抱石攀岩館與其工作人員之任何賠償義務。如參與者為未滿十八歲之未成年人，本人為其家長／監護人，並同意其參與本活動，同時承擔上述責任。</p>
+
+    <label>簽名：</label>
+    <canvas id="signature-pad"></canvas>
+    <button type="button" id="clear-signature">清除簽名</button>
+
+    <button type="submit">送出</button>
+  </form>
+
+  <p id="success-msg" style="color: green; display: none;">✅ 已成功送出！</p>
+
+  <script>
+    const canvas = document.getElementById('signature-pad');
+    const signaturePad = new SignaturePad(canvas);
+    const clearBtn = document.getElementById('clear-signature');
+    clearBtn.addEventListener('click', () => signaturePad.clear());
+
+    document.getElementById('waiverForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+
+      if (signaturePad.isEmpty()) {
+        alert('請簽名後再送出');
+        return;
+      }
+
+      const formData = new FormData(this);
+      formData.append('signature', signaturePad.toDataURL());
+
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbzxuEDWvZR8JwU339srh8gmocwIIw85i5a4vItGR6ijHEQ5_9mdU7KssTg6NMY8Q6-Hjg/exec';
+
+      try {
+        const response = await fetch(scriptURL, {
+          method: 'POST',
+          body: formData
+        });
+
+        if (response.ok) {
+          document.getElementById('success-msg').style.display = 'block';
+          this.reset();
+          signaturePad.clear();
+        } else {
+          alert('送出失敗，請確認網路連線或稍後再試');
+        }
+      } catch (error) {
+        console.error('送出錯誤:', error);
+        alert('送出過程中發生錯誤');
+      }
+    });
+  </script>
+</body>
+</html>
