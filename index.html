@@ -11,7 +11,7 @@
       font-family: 'Noto Sans TC', 'Microsoft JhengHei', 'PingFang TC', sans-serif;
       background: #f5f7fa;
       margin: 0;
-      color: var(--main-blue);
+      color: #232629;
     }
     .main-card {
       background: #fff;
@@ -60,7 +60,7 @@
       max-height: 570px;
       overflow-y: auto;
       font-size: 1.11em;
-      color: var(--main-blue);
+      color: #233;
       box-sizing: border-box;
     }
     @media (max-width:600px) {
@@ -69,9 +69,11 @@
       .site-title { font-size: 2em; }
       h2.page-title { font-size: 1.08em; }
     }
+    .terms-block h3, .terms-block h4 {
+      color: var(--main-blue);
+    }
     .terms-block h3 {
       margin: 0.8em 0 0.2em 0;
-      color: var(--main-blue);
       font-size: 1.09em;
       font-weight: bold;
       letter-spacing: 1px;
@@ -80,7 +82,6 @@
     }
     .terms-block h4 {
       margin: 1.1em 0 0.4em 0;
-      color: var(--main-blue);
       font-size: 1.01em;
       font-weight: bold;
       letter-spacing: 1px;
@@ -89,23 +90,23 @@
       margin: 0.15em 0 0.7em 1.7em;
       font-size: 0.99em;
       line-height: 1.8;
-      color: var(--main-blue);
+      color: #233;
       padding-left: 0.2em;
     }
     .terms-block li {margin-bottom: 0.44em;}
     .terms-block .sub-desc {
       margin: 0.35em 0 0.9em 0.8em;
-      color: var(--main-blue);
+      color: #4a4c50;
       font-size: 0.97em;
       line-height: 1.7;
     }
     .checkbox-block { background: #f7fbff; border-radius: 8px; padding: 1em 1.2em; margin-bottom: 1.2em; display: flex; flex-direction: column; gap: 0.9em; font-size: 1.11em; color: var(--main-blue);}
     .checkbox-block label { display: flex; align-items: flex-start; gap: 0.6em; font-weight: 500; color: var(--main-blue); cursor: pointer;}
     label { display: block; margin: 1em 0 0.2em 0; color: var(--main-blue); font-weight: 500; letter-spacing: 1px; }
-    input[type="text"], input[type="tel"], input[type="date"], select { width: 100%; padding: 0.48em; border-radius: 6px; border: 1px solid #bcd; font-size: 1em; box-sizing: border-box; background: #f8fafc; transition: border .15s; color: var(--main-blue);}
+    input[type="text"], input[type="tel"], input[type="date"], select { width: 100%; padding: 0.48em; border-radius: 6px; border: 1px solid #bcd; font-size: 1em; box-sizing: border-box; background: #f8fafc; transition: border .15s; color: #232629;}
     input[type="text"]:focus, input[type="tel"]:focus, input[type="date"]:focus { outline: 2px solid #398be8; border-color: #398be8; }
     .radio-group { display: flex; gap: 2.2em; margin: 0.42em 0 0.8em 0; align-items: center; }
-    .radio-group label { font-weight: 400; color: var(--main-blue); font-size: 1em; margin: 0; }
+    .radio-group label { font-weight: 400; color: #232629; font-size: 1em; margin: 0; }
     .nav-btns { margin-top: 1.5em; display: flex; justify-content: space-between; gap: 0.6em; }
     .nav-btns button, .submit-btn {
       background: var(--main-blue);
@@ -271,9 +272,9 @@
       </div>
       <!-- Step 5 成功頁 -->
       <div id="final-page" style="display:none">
-        <div style="font-size:2.5em; margin-top:1.2em;">✅</div>
-        <div style="font-size:1.3em; margin: 1em 0 0.2em 0;"><b>已成功送出！</b></div>
-        <div style="font-size:1.06em;">感謝您填寫同意書，<br>祝您攀登愉快、平安順利！</div>
+        <div style="font-size:2.5em; margin-top:1.2em; color:var(--main-blue);">✅</div>
+        <div style="font-size:1.3em; margin: 1em 0 0.2em 0; color:var(--main-blue);"><b>已成功送出！</b></div>
+        <div style="font-size:1.06em; color:#232629;">感謝您填寫同意書，<br>祝您攀登愉快、平安順利！</div>
         <button class="final-btn" id="more-btn" type="button">提交更多資料</button>
       </div>
     </form>
