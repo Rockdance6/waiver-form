@@ -55,13 +55,14 @@
     .terms-block {
       background: #e9f0fb;
       border-radius: 10px;
-      padding: 1.5em 1.3em 1.3em 1.3em;
+      padding: 1.6em 1.3em 1.3em 1.3em;
       margin-bottom: 1.1em;
       max-height: 570px;
       overflow-y: auto;
       font-size: 1.11em;
       color: #233;
       box-sizing: border-box;
+      -webkit-overflow-scrolling: touch;
     }
     @media (max-width:600px) {
       .main-card { max-width: 100vw; }
@@ -125,7 +126,19 @@
     .submit-btn { width: 100%; margin-top: 1.6em; }
     .canvas-block { margin: 1.7em 0 1.2em 0; }
     .canvas-block label { font-weight: 600; color: var(--main-blue); margin-bottom: 0.5em; margin-top: 0.3em; }
-    .sign-canvas { border: 1.5px solid #b4cdf7; border-radius: 10px; width: 100%; height: 120px; background: #fff; box-shadow: 0 2px 8px #3774bb18; touch-action: none; }
+    .sign-canvas {
+      border: 1.5px solid #b4cdf7;
+      border-radius: 10px;
+      width: 100%;
+      height: 120px;
+      background: #fff;
+      box-shadow: 0 2px 8px #3774bb18;
+      touch-action: none;
+      user-select: none;
+      -webkit-user-select: none;
+      -webkit-touch-callout: none;
+      -webkit-tap-highlight-color: transparent;
+    }
     .clear-btn { margin-top: 0.6em; background: #999; border: none; color: #fff; border-radius: 7px; padding: 0.45em 1.5em; font-size: 1em; font-weight: 500; cursor: pointer; transition: background 0.2s; margin-right: 0.7em; }
     .clear-btn:hover { background: #5d6673; }
     .err-msg { color: #dc3545; font-size: 0.97em; margin-top: 0.3em; margin-bottom: 0.4em; }
@@ -198,30 +211,34 @@
           <button type="button" id="to-step-2">下一頁</button>
         </div>
       </div>
-      <!-- Step 2 條款二 -->
+      <!-- Step 2 入場須知（依截圖分段） -->
       <div id="step-2" style="display:none">
         <h2 class="page-title">入場須知與安全守則</h2>
-        <div class="terms-block" style="margin-bottom: 1.1em;">
+        <div class="terms-block">
           <h3>《入場須知與安全守則》</h3>
+          <div class="sub-desc" style="margin-top:0;">
+            舞岩抱石攀岩館（以下簡稱本館）致力於為使用者打造一個安全的攀登環境，為維護每位攀登者的健康與安全，並確保場館內的秩序與規範，所有進入本館的使用者必須詳細閱讀並遵守本守則，以確保自身及他人之安全。
+          </div>
           <ul>
-            <li>入館前請完成登記與付費，並請向工作人員確認安全墜落姿勢。</li>
-            <li>5歲以下不得參與攀岩。未滿9歲（或未滿國小三年級）需由家長或法定監護人陪同。</li>
-            <li>未滿18歲者需由監護人簽署同意書。</li>
-            <li>進行抱石時請穿著攀岩鞋，不可赤腳攀爬。</li>
-            <li>攀登區嚴禁飲食，水壺請放指定區。</li>
-            <li>勿將物品放置於軟墊上。</li>
-            <li>本館全面禁煙、禁止酒精、口香糖、檳榔。</li>
-            <li>館內禁止奔跑、打鬧、玩耍。</li>
-            <li>通過攀登區時應注意牆上攀登者並快速通過。</li>
-            <li>嚴禁於軟墊上逗留、休息。</li>
-            <li>應視自身狀況進行攀爬，熱身收操不可少。</li>
-            <li>應注意自身及他人安全，攀爬時避免與他人發生碰撞。</li>
-            <li>應依照正確方式墜落，避免跌落於軟墊邊緣。</li>
-            <li>如發現設施異常請立即通報工作人員。</li>
-            <li>嚴禁私自拆卸岩塊或破壞設備。</li>
-            <li>本館禁止私人教學，並禁止攜帶危險物品入館。</li>
-            <li>違反場館規範時，工作人員得視情況制止及處理。</li>
-            <li>其他未盡事宜，得由館方依現場狀況適時修訂。</li>
+            <li>入館前請完成登記與付費，攀登者請務必向工作人員確認安全墜落姿勢。</li>
+            <li>除攀岩體驗外，5歲以下不得參與攀岩活動；未滿9歲（或未滿國小三年級）之兒童，必須由家長或法定監護人陪同負責其安全；未滿18歲者需由監護人簽署同意書。</li>
+            <li>進行抱石活動時，請著攀岩鞋，不得赤腳攀爬。</li>
+            <li>攀登區禁止飲食。水壺請放置於指定之位置。</li>
+            <li>請勿將物品放於軟墊上。</li>
+            <li>本館全面禁煙、口香糖、檳榔及含酒精飲料。</li>
+            <li>本館內嚴禁奔跑、打鬧或玩耍。</li>
+            <li>通過攀登區時，應隨時注意岩牆上之攀登者動向，在不影響攀登者的情況下盡速通過。</li>
+            <li>嚴禁在軟墊上逗留。</li>
+            <li>攀登者應根據自身身體狀況進行攀爬，避免超過身體極限負荷，並確實熱身與收操，以防運動傷害。</li>
+            <li>攀岩過程中，除自身安全外，也須注意他人的安全，並隨時注意他人的攀爬動向，避免發生撞擊危險。</li>
+            <li>請依照「安全墜落」之觀念進行墜落，且避免墜落於軟墊邊緣，以免發生危險。</li>
+            <li>若有發現岩塊鬆動或是其他設施異常，請立即通知現場工作人員。</li>
+            <li>非本館工作人員，請勿拆除或轉動岩塊。</li>
+            <li>蓄意破壞或盜竊館設備，除依法嚴辦外，須照價賠償。</li>
+            <li>本館禁止進行私人教學行為。</li>
+            <li>請勿攜帶本館工作人員認定之危險物品入館。</li>
+            <li>若發現有參與者違反安全使用規範或不遵守場館規範，工作人員可隨時進行制止，並視情況進行必要的處理。</li>
+            <li>以上若有未盡事宜，本館工作人員得依現場狀況做適當處置，並修改相關辦法。</li>
           </ul>
         </div>
         <div class="checkbox-block">
@@ -356,6 +373,30 @@
     document.getElementById('clear1').onclick = ()=>signaturePad1.clear();
     document.getElementById('clear2').onclick = ()=>signaturePad2.clear();
   };
+
+  // 滑動條款區塊到底自動傳遞到頁面
+  document.querySelectorAll('.terms-block').forEach(function(block){
+    block.addEventListener('touchstart', function(e){
+      this._startY = e.touches[0].clientY;
+    }, {passive:true});
+    block.addEventListener('touchmove', function(e){
+      const el = this;
+      const scrollTop = el.scrollTop;
+      const scrollHeight = el.scrollHeight;
+      const offsetHeight = el.offsetHeight;
+      const atTop = scrollTop === 0;
+      const atBottom = scrollTop + offsetHeight >= scrollHeight - 1;
+      const currentY = e.touches[0].clientY;
+      const up = (currentY > el._startY);
+      const down = (currentY < el._startY);
+
+      if ((atTop && up) || (atBottom && down)) {
+        e.preventDefault();
+        e.stopPropagation();
+        window.scrollBy(0, el._startY - currentY);
+      }
+    }, {passive:false});
+  });
 
   // 判斷年齡（未滿18必簽家長）
   function isMinor() {
