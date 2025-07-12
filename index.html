@@ -6,131 +6,36 @@
   <title>舞岩抱石攀岩館 責任風險承擔同意書</title>
   <script src="https://cdn.jsdelivr.net/npm/signature_pad@4.1.5/dist/signature_pad.umd.min.js"></script>
   <style>
-    body {
-      font-family: "Noto Sans TC", "Microsoft JhengHei", "PingFang TC", sans-serif;
-      margin: 0;
-      background: #f3f6fa;
-      color: #233;
-    }
-    .main-card {
-      background: #fff;
-      max-width: 540px;
-      margin: 2em auto 2em auto;
-      border-radius: 16px;
-      box-shadow: 0 4px 16px #0c237a13;
-      padding: 2em 2em 1.4em 2em;
-      position: relative;
-    }
-    @media (max-width:600px) {
-      .main-card { padding: 1.1em 0.5em 1em 0.5em; border-radius: 0; margin: 0; }
-    }
-    h2 {
-      text-align: center;
-      color: #2064bb;
-      margin: 0 0 0.7em 0;
-      font-size: 1.45em;
-      letter-spacing: 1.5px;
-      font-weight: 700;
-    }
-    .logo {
-      display: block;
-      margin: 0 auto 12px auto;
-      max-height: 66px;
-      max-width: 220px;
-    }
-    .step-indicator {
-      text-align: center;
-      margin-bottom: 1.5em;
-      color: #3774bb;
-      letter-spacing: 1px;
-      font-size: 1em;
-      font-weight: 600;
-    }
+    body { font-family: 'Noto Sans TC', 'Microsoft JhengHei', 'PingFang TC', sans-serif; background: #f3f6fa; margin: 0; color: #222; }
+    .main-card { background: #fff; max-width: 580px; margin: 2em auto 2em auto; border-radius: 18px; box-shadow: 0 4px 20px #2260a731; padding: 2em 2em 1.4em 2em; position: relative; }
+    @media (max-width:600px) { .main-card { padding: 1em 0.4em 1em 0.4em; border-radius: 0; margin: 0; } }
+    h2 { text-align: center; color: #2064bb; margin: 0 0 0.7em 0; font-size: 1.45em; letter-spacing: 1.5px; font-weight: 700; }
+    .step-indicator { text-align: center; margin-bottom: 1.1em; color: #3774bb; letter-spacing: 1px; font-size: 1em; font-weight: 600; }
     .terms-block {
       background: #e9f0fb;
       border-radius: 10px;
-      padding: 1em 1em 1em 1.1em;
+      padding: 1em 1.2em;
       margin-bottom: 1.1em;
-      max-height: 220px;
+      max-height: 380px;  /* 由原本 250px 拉高到 380px */
       overflow-y: auto;
-    }
-    .terms-block h3 {
-      margin: 0.8em 0 0.2em 0;
-      color: #2260a7;
-      font-size: 1.08em;
-      font-weight: bold;
-      border-left: 4px solid #3774bb;
-      padding-left: 0.5em;
-      letter-spacing: 1px;
-    }
-    .terms-block p {
-      margin: 0.4em 0 0.6em 1em;
-      font-size: 0.98em;
-      line-height: 1.75;
+      font-size: 1.04em;
       color: #233;
     }
-    .checkbox-block {
-      background: #f7fbff;
-      border-radius: 8px;
-      padding: 0.9em 1.1em;
-      margin-bottom: 1.2em;
-      display: flex;
-      flex-direction: column;
-      gap: 0.7em;
-      font-size: 1em;
+    @media (max-width:600px) {
+      .terms-block { max-height: 200px; }
     }
-    .checkbox-block label {
-      display: flex;
-      align-items: flex-start;
-      gap: 0.6em;
-      font-weight: 500;
-      cursor: pointer;
-      color: #24518c;
-    }
-    label {
-      display: block;
-      margin: 0.9em 0 0.2em 0;
-      color: #23529d;
-      font-weight: 500;
-      letter-spacing: 1px;
-      font-size: 1em;
-    }
-    input[type="text"], input[type="tel"], input[type="date"], input[type="email"], select {
-      width: 100%;
-      padding: 0.47em;
-      border-radius: 6px;
-      border: 1px solid #bcd;
-      font-size: 1em;
-      box-sizing: border-box;
-      margin-top: 0.08em;
-      background: #f8fafc;
-      transition: border .15s;
-    }
-    input[type="text"]:focus, input[type="tel"]:focus, input[type="date"]:focus, input[type="email"]:focus {
-      outline: 2px solid #398be8;
-      border-color: #398be8;
-    }
-    .radio-group {
-      display: flex;
-      gap: 2.5em;
-      margin: 0.42em 0 0.8em 0;
-      align-items: center;
-    }
-    .radio-group label {
-      font-weight: 400;
-      color: #234;
-      font-size: 1em;
-      margin: 0;
-      letter-spacing: 0;
-    }
-    .nav-btns {
-      margin-top: 1.6em;
-      display: flex;
-      justify-content: space-between;
-      gap: 0.6em;
-    }
+    .terms-block h3 { margin: 0.8em 0 0.2em 0; color: #2260a7; font-size: 1.08em; font-weight: bold; border-left: 4px solid #3774bb; padding-left: 0.5em; letter-spacing: 1px; }
+    .terms-block p, .terms-block ul { margin: 0.4em 0 0.7em 1.2em; font-size: 0.99em; line-height: 1.8; color: #233; }
+    .checkbox-block { background: #f7fbff; border-radius: 8px; padding: 1em 1.2em; margin-bottom: 1.2em; display: flex; flex-direction: column; gap: 0.9em; font-size: 1em; }
+    .checkbox-block label { display: flex; align-items: flex-start; gap: 0.6em; font-weight: 500; color: #24518c; cursor: pointer; font-size: 1.13em; }
+    label { display: block; margin: 1em 0 0.2em 0; color: #23529d; font-weight: 500; letter-spacing: 1px; }
+    input[type="text"], input[type="tel"], input[type="date"], select { width: 100%; padding: 0.48em; border-radius: 6px; border: 1px solid #bcd; font-size: 1em; box-sizing: border-box; background: #f8fafc; transition: border .15s; }
+    input[type="text"]:focus, input[type="tel"]:focus, input[type="date"]:focus { outline: 2px solid #398be8; border-color: #398be8; }
+    .radio-group { display: flex; gap: 2.2em; margin: 0.42em 0 0.8em 0; align-items: center; }
+    .radio-group label { font-weight: 400; color: #234; font-size: 1em; margin: 0; }
+    .nav-btns { margin-top: 1.5em; display: flex; justify-content: space-between; gap: 0.6em; }
     .nav-btns button, .submit-btn {
-      background: linear-gradient(90deg, #3373ce 65%, #3ec1f8 100%);
+      background: #205087;
       border: none;
       color: #fff;
       padding: 0.8em 2.1em;
@@ -139,176 +44,244 @@
       font-weight: bold;
       box-shadow: 0 2px 10px #0c237a18;
       cursor: pointer;
-      transition: background 0.18s;
+      transition: background 0.15s;
       letter-spacing: 1px;
     }
     .nav-btns button:hover, .submit-btn:hover {
-      background: linear-gradient(90deg, #2462a4 80%, #32aee2 100%);
+      background: #123865;
     }
-    .submit-btn {
-      width: 100%;
-      margin-top: 1.6em;
-    }
-    .canvas-block {
-      margin: 1.6em 0 1em 0;
-    }
-    .canvas-block label {
-      font-weight: 600;
-      color: #234e90;
-      margin-bottom: 0.5em;
-      margin-top: 0.3em;
-    }
-    .sign-canvas {
-      border: 1.5px solid #b4cdf7;
-      border-radius: 10px;
-      width: 100%;
-      height: 140px;
-      background: #fff;
-      box-shadow: 0 2px 8px #3774bb18;
-      touch-action: none;
-    }
-    .clear-btn {
-      margin-top: 0.6em;
-      background: #999;
-      border: none;
-      color: #fff;
-      border-radius: 7px;
-      padding: 0.45em 1.7em;
-      font-size: 1em;
-      font-weight: 500;
-      cursor: pointer;
-      transition: background 0.2s;
-      margin-right: 0.7em;
-    }
+    .submit-btn { width: 100%; margin-top: 1.6em; }
+    .canvas-block { margin: 1.7em 0 1.2em 0; }
+    .canvas-block label { font-weight: 600; color: #234e90; margin-bottom: 0.5em; margin-top: 0.3em; }
+    .sign-canvas { border: 1.5px solid #b4cdf7; border-radius: 10px; width: 100%; height: 120px; background: #fff; box-shadow: 0 2px 8px #3774bb18; touch-action: none; }
+    .clear-btn { margin-top: 0.6em; background: #999; border: none; color: #fff; border-radius: 7px; padding: 0.45em 1.5em; font-size: 1em; font-weight: 500; cursor: pointer; transition: background 0.2s; margin-right: 0.7em; }
     .clear-btn:hover { background: #5d6673; }
-    .err-msg {
-      color: #dc3545;
-      font-size: 0.98em;
-      margin-top: 0.3em;
-      margin-bottom: 0.5em;
-    }
-    #success-msg {
-      color: #188a2b;
-      font-size: 1.13em;
-      text-align: center;
-      margin-top: 2em;
-    }
+    .err-msg { color: #dc3545; font-size: 0.97em; margin-top: 0.3em; margin-bottom: 0.4em; }
+    #success-msg { color: #188a2b; font-size: 1.13em; text-align: center; margin-top: 2em; }
     @media (max-width:520px) {
       .main-card { max-width: 99vw; border-radius: 0; }
       h2 { font-size: 1.09em; }
-      .terms-block { max-height: 165px; font-size: 0.96em;}
+      .terms-block { max-height: 200px; font-size: 0.96em;}
       .nav-btns button, .submit-btn { font-size: 0.98em; padding: 0.7em 1em;}
       .canvas-block { margin-top: 1.1em;}
     }
   </style>
 </head>
 <body>
-  <div class="main-card">
-    <h2>舞岩抱石攀岩館 責任風險承擔同意書</h2>
-    <!-- <img src="你的LOGO網址" class="logo" alt="logo">  ← 你有logo時放這行，移除註解即可 -->
-
-    <div id="form-stepper">
-
-      <!-- step 1 條款與同意 -->
-      <form id="waiverForm" autocomplete="off">
-        <div id="step-1" style="display:block">
-          <div class="step-indicator">第 1 步：閱讀並同意條款</div>
-          <div class="terms-block">
-            <h3>《責任與風險承擔同意書》</h3>
-            <p>為了確保您的安全與知情權，請詳閱本同意書內容。</p>
-            <p><b>一、活動風險告知</b><br>
-            本人知悉並理解攀岩與抱石運動具有以下潛在風險，包括但不限於：<br>
-            身體損傷（如扭傷、拉傷、骨折、瘀青、擦傷等）<br>
-            器材使用不當、與他人碰撞或場地內意外、任何因參與本活動而導致的心理或身體不適。<br>
-            本人理解即使遵守所有安全規定，這些風險無法完全避免，且本人願意自行承擔所有風險。</p>
-            <p><b>二、參與者聲明</b><br>
-            本人保證身心健康，無不適合從事劇烈運動之疾病或心理問題（如心臟病、癲癇、懷孕等）。<br>
-            本人將遵守工作人員指示與安全規範，不進行危險行為或未經授權之操作。<br>
-            本人同意在攀岩過程中隨時注意自身及他人的安全，並遵守基本的攀岩禮節和場館安全規範。在攀爬過程中，若發現安全隱患或不適，將立即停止並向場館工作人員報告。<br>
-            本人已完整閱讀並理解活動規則及風險說明，願意自行承擔活動中可能產生之風險與責任。</p>
-            <p><b>三、免責與賠償聲明</b><br>
-            本人同意如因本人行為不當、違反規定、個人疏忽或其他非場地方責任因素所導致之任何事故、傷害、財物損失，將自行負責，並放棄對舞岩抱石攀岩館館方、教練或工作人員之一切追訴或賠償要求。<br>
-            如本人行為導致第三人受損害，願意自行負擔相應賠償責任。<br>
-            舞岩抱石攀岩館提供基本的場地保險，該保險僅涵蓋場館內設施的意外責任，不涵蓋參與者個人健康或意外風險。建議參與者自行投保額外的運動意外險以增加保障。</p>
-            <p><b>四、個人資料使用</b><br>
-            本人同意舞岩抱石攀岩館有權拍攝本人參與活動過程中的照片及影像，並可將其用於紀錄、宣傳或其他商業用途。如不同意該用途，本人將提前通知工作人員。</p>
-            <h3>《入場須知與安全守則》</h3>
-            <p>舞岩抱石攀岩館（以下簡稱本館）致力於為使用者打造一個安全的攀登環境，為維護每位攀登者的健康與安全，並確保場館內的秩序與規範，所有進入本館的使用者必須詳細閱讀並遵守本守則，以確保自身及他人之安全。</p>
-            <ul>
-              <li>入館前請完成登記與付費，攀登者請務必向工作人員確認安全墜落姿勢。</li>
-              <li>除攀岩體驗外，５歲以下不得參與攀岩活動；未滿９歲（或未滿國小三年級）之兒童，必須由家長或法定監護人陪同並負責其安全；未滿１８歲者需由監護人簽署同意書。</li>
-              <li>進行抱石活動時，請穿著「攀岩鞋」，不得赤腳攀爬。</li>
-              <li>攀登區禁止飲食。水壺請放置於指定之位置。</li>
-              <li>請勿放置物品於軟墊上。</li>
-              <li>本館全面禁煙、口香糖、檳榔及含酒精飲料。</li>
-              <li>本館內嚴禁奔跑、打鬧或玩耍。</li>
-              <li>通過攀登區時，應隨時注意岩牆上之攀登者動向，在不影響攀登者的情況下盡速通過。</li>
-              <li>嚴禁在軟墊上逗留。</li>
-              <li>攀登者應根據自身身體狀況進行攀爬，避免超過身體極限負荷。並請確實熱身與收操，以防運動傷害。</li>
-              <li>攀爬過程中，除自身安全外，也須注意其他攀登者的安全，並隨時注意他人的動作與攀爬動向，避免發生撞擊危險。</li>
-              <li>請依照「安全墜落」之觀念進行墜落。且避免墜落於軟墊邊緣，以免發生危險。</li>
-              <li>若有發現岩塊鬆動或是其他設施之異常，請立即通知現場工作人員。</li>
-              <li>非本館工作人員，請勿拆除或轉動岩塊。</li>
-              <li>蓄意破壞或盜竊岩館設備，除依法嚴辦外，須照價賠償。</li>
-              <li>本館禁止進行私人教學行為。</li>
-              <li>請勿攜帶本館工作人員認定之危險物品入館。</li>
-              <li>若發現有參與者違反安全使用規定或不遵守場館規範，工作人員可隨時進行制止，並視情況進行必要的處理。</li>
-              <li>以上若有未盡事宜，本館工作人員得依現場狀況做適當處置，並修改相關辦法。</li>
-            </ul>
-          </div>
-          <div class="checkbox-block">
-            <label>
-              <input type="checkbox" name="agree1" required>
-              我已詳細閱讀並同意上述條款內容
-            </label>
-            <label>
-              <input type="checkbox" name="agree2" required>
-              我已知悉並同意遵守入場須知與安全守則
-            </label>
-          </div>
-          <div class="nav-btns">
-            <button type="button" id="to-step-2">下一頁</button>
-          </div>
+<div class="main-card">
+  <h2>舞岩抱石攀岩館 責任風險承擔同意書</h2>
+  <!-- <img src="你的logo網址" class="logo" alt="logo"> -->
+  <div id="form-stepper">
+    <form id="waiverForm" autocomplete="off">
+      <!-- Step 1 條款 -->
+      <div id="step-1" style="display:block">
+        <div class="step-indicator">第 1 步：閱讀並同意條款</div>
+        <div class="terms-block" style="margin-bottom: 1.1em;">
+          <h3>《責任與風險承擔同意書》</h3>
+          <p>為了確保您的安全與知情權，請詳閱本同意書內容。</p>
+          <p><b>一、活動風險告知</b><br>
+          本人知悉並理解攀岩與抱石運動具有以下潛在風險，包括但不限於：<br>
+          身體損傷（如扭傷、拉傷、骨折、瘀青、擦傷等）<br>
+          器材使用不當、與他人碰撞或場地內意外、任何因參與本活動而導致的心理或身體不適。<br>
+          本人理解即使遵守所有安全規定，這些風險無法完全避免，且本人願意自行承擔所有風險。</p>
+          <p><b>二、參與者聲明</b><br>
+          本人保證身心健康，無不適合從事劇烈運動之疾病或心理問題（如心臟病、癲癇、懷孕等）。<br>
+          本人將遵守工作人員指示與安全規範，不進行危險行為或未經授權之操作。<br>
+          本人同意在攀岩過程中隨時注意自身及他人的安全，並遵守基本的攀岩禮節和場館安全規範。在攀爬過程中，若發現安全隱患或不適，將立即停止並向場館工作人員報告。<br>
+          本人已完整閱讀並理解活動規則及風險說明，願意自行承擔活動中可能產生之風險與責任。</p>
+          <p><b>三、免責與賠償聲明</b><br>
+          本人同意如因本人行為不當、違反規定、個人疏忽或其他非場地方責任因素所導致之任何事故、傷害、財物損失，將自行負責，並放棄對舞岩抱石攀岩館館方、教練或工作人員之一切追訴或賠償要求。<br>
+          如本人行為導致第三人受損害，願意自行負擔相應賠償責任。<br>
+          舞岩抱石攀岩館提供基本的場地保險，該保險僅涵蓋場館內設施的意外責任，不涵蓋參與者個人健康或意外風險。建議參與者自行投保額外的運動意外險以增加保障。</p>
+          <p><b>四、個人資料使用</b><br>
+          本人同意舞岩抱石攀岩館有權拍攝本人參與活動過程中的照片及影像，並可將其用於紀錄、宣傳或其他商業用途。如不同意該用途，本人將提前通知工作人員。</p>
+          <h3>《入場須知與安全守則》</h3>
+          <ul>
+            <li>入館前請完成登記與付費，攀登者請務必向工作人員確認安全墜落姿勢。</li>
+            <li>除攀岩體驗外，５歲以下不得參與攀岩活動；未滿９歲（或未滿國小三年級）之兒童，必須由家長或法定監護人陪同並負責其安全；未滿１８歲者需由監護人簽署同意書。</li>
+            <li>進行抱石活動時，請穿著「攀岩鞋」，不得赤腳攀爬。</li>
+            <li>攀登區禁止飲食。水壺請放置於指定之位置。</li>
+            <li>請勿放置物品於軟墊上。</li>
+            <li>本館全面禁煙、口香糖、檳榔及含酒精飲料。</li>
+            <li>本館內嚴禁奔跑、打鬧或玩耍。</li>
+            <li>通過攀登區時，應隨時注意岩牆上之攀登者動向，在不影響攀登者的情況下盡速通過。</li>
+            <li>嚴禁在軟墊上逗留。</li>
+            <li>攀登者應根據自身身體狀況進行攀爬，避免超過身體極限負荷。並請確實熱身與收操，以防運動傷害。</li>
+            <li>攀爬過程中，除自身安全外，也須注意其他攀登者的安全，並隨時注意他人的動作與攀爬動向，避免發生撞擊危險。</li>
+            <li>請依照「安全墜落」之觀念進行墜落。且避免墜落於軟墊邊緣，以免發生危險。</li>
+            <li>若有發現岩塊鬆動或是其他設施之異常，請立即通知現場工作人員。</li>
+            <li>非本館工作人員，請勿拆除或轉動岩塊。</li>
+            <li>蓄意破壞或盜竊岩館設備，除依法嚴辦外，須照價賠償。</li>
+            <li>本館禁止進行私人教學行為。</li>
+            <li>請勿攜帶本館工作人員認定之危險物品入館。</li>
+            <li>若發現有參與者違反安全使用規定或不遵守場館規範，工作人員可隨時進行制止，並視情況進行必要的處理。</li>
+            <li>以上若有未盡事宜，本館工作人員得依現場狀況做適當處置，並修改相關辦法。</li>
+          </ul>
         </div>
-
-        <!-- step 2 個人資料 -->
-        <div id="step-2" style="display:none">
-          <div class="step-indicator">第 2 步：填寫個人及緊急聯絡資料</div>
-          <label>姓名
-            <input type="text" name="name" required>
-          </label>
-          <label>身分證字號
-            <input type="text" name="idnumber" required>
-          </label>
-          <div class="radio-group">
-            <label><input type="radio" name="gender" value="男" required> 男</label>
-            <label><input type="radio" name="gender" value="女" required> 女</label>
-          </div>
-          <label>出生年月日
-            <input type="date" name="dob" required>
-          </label>
-          <label>連絡電話
-            <input type="tel" name="phone" required>
-          </label>
-          <label>緊急聯絡人
-            <input type="text" name="emergency_contact" required>
-          </label>
-          <label>緊急聯絡人關係
-            <input type="text" name="emergency_relation" required>
-          </label>
-          <label>緊急聯絡人電話
-            <input type="tel" name="emergency_phone" required>
-          </label>
-          <div class="nav-btns">
-            <button type="button" id="to-step-1">上一步</button>
-            <button type="button" id="to-step-3">下一頁</button>
-          </div>
+        <div class="checkbox-block">
+          <label><input type="checkbox" id="agree1" required> 我已詳細閱讀並同意上述條款內容</label>
+          <label><input type="checkbox" id="agree2" required> 我已知悉並同意遵守入場須知與安全守則</label>
         </div>
+        <div class="nav-btns">
+          <button type="button" id="to-step-2">下一頁</button>
+        </div>
+      </div>
+      <!-- Step 2 個人資料 -->
+      <div id="step-2" style="display:none">
+        <div class="step-indicator">第 2 步：填寫個人及緊急聯絡資料</div>
+        <label>姓名<input type="text" id="name" required></label>
+        <label>身分證字號<input type="text" id="idnumber" required></label>
+        <div class="radio-group">
+          <label><input type="radio" name="gender" value="男" required> 男</label>
+          <label><input type="radio" name="gender" value="女" required> 女</label>
+        </div>
+        <label>出生年月日<input type="date" id="dob" required></label>
+        <label>連絡電話<input type="tel" id="phone" required></label>
+        <label>緊急聯絡人<input type="text" id="emergency_contact" required></label>
+        <label>緊急聯絡人關係<input type="text" id="emergency_relation" required></label>
+        <label>緊急聯絡人電話<input type="tel" id="emergency_phone" required></label>
+        <div class="nav-btns">
+          <button type="button" id="to-step-1">上一步</button>
+          <button type="button" id="to-step-3">下一頁</button>
+        </div>
+      </div>
+      <!-- Step 3 簽名 -->
+      <div id="step-3" style="display:none">
+        <div class="step-indicator">第 3 步：簽名</div>
+        <div class="canvas-block">
+          <label>參與者簽名（必填）</label>
+          <canvas id="signature1" class="sign-canvas"></canvas>
+          <button type="button" class="clear-btn" id="clear1">清除簽名</button>
+        </div>
+        <div class="canvas-block">
+          <label>家長／監護人簽名（如未滿18歲必填）</label>
+          <canvas id="signature2" class="sign-canvas"></canvas>
+          <button type="button" class="clear-btn" id="clear2">清除簽名</button>
+        </div>
+        <div class="nav-btns">
+          <button type="button" id="to-step-2b">上一步</button>
+        </div>
+        <button type="submit" class="submit-btn">送出</button>
+      </div>
+    </form>
+    <p id="success-msg" style="color: green; display: none;">✅ 已成功送出！</p>
+  </div>
+</div>
+<script>
+  // 分頁切換
+  const step1 = document.getElementById('step-1');
+  const step2 = document.getElementById('step-2');
+  const step3 = document.getElementById('step-3');
+  function showStep(step) {
+    step1.style.display = (step===1)?'block':'none';
+    step2.style.display = (step===2)?'block':'none';
+    step3.style.display = (step===3)?'block':'none';
+    window.scrollTo(0,0);
+  }
+  document.getElementById('to-step-2').onclick = function() {
+    if(!document.getElementById('agree1').checked || !document.getElementById('agree2').checked){
+      alert('請勾選所有同意欄位');
+      return;
+    }
+    showStep(2);
+  };
+  document.getElementById('to-step-1').onclick = function() { showStep(1); };
+  document.getElementById('to-step-3').onclick = function() {
+    const fields = [
+      'name','idnumber','dob','phone','emergency_contact','emergency_relation','emergency_phone'
+    ];
+    for(let id of fields){
+      if(!document.getElementById(id).value){
+        document.getElementById(id).focus();
+        alert('請完整填寫所有資料');
+        return;
+      }
+    }
+    // 檢查性別
+    if(!document.querySelector('input[name="gender"]:checked')){
+      alert('請選擇性別');
+      return;
+    }
+    showStep(3);
+  };
+  document.getElementById('to-step-2b').onclick = function() { showStep(2); };
 
-        <!-- step 3 簽名 -->
-        <div id="step-3" style="display:none">
-          <div class="step-indicator">第 3 步：簽名</div>
-          <div class="canvas-block">
-            <label for="signature-pad">參與者簽名（必填）</label>
-            <canvas id="signature-pad" class="sign-canvas"></canvas>
-            <button type="button" class="clear-btn
+  // 簽名區
+  function resizeCanvas(canvas, pad) {
+    const ratio = Math.max(window.devicePixelRatio || 1, 1);
+    canvas.width = canvas.offsetWidth * ratio;
+    canvas.height = canvas.offsetHeight * ratio;
+    canvas.getContext('2d').scale(ratio, ratio);
+    pad.clear();
+  }
+  const canvas1 = document.getElementById('signature1');
+  const canvas2 = document.getElementById('signature2');
+  const signaturePad1 = new SignaturePad(canvas1);
+  const signaturePad2 = new SignaturePad(canvas2);
+  function resizeAll() {
+    resizeCanvas(canvas1, signaturePad1);
+    resizeCanvas(canvas2, signaturePad2);
+  }
+  window.addEventListener('resize', resizeAll);
+  setTimeout(resizeAll, 200);
+  document.getElementById('clear1').onclick = ()=>signaturePad1.clear();
+  document.getElementById('clear2').onclick = ()=>signaturePad2.clear();
+
+  // 判斷年齡（未滿18必簽家長）
+  function isMinor() {
+    const dob = document.getElementById('dob').value;
+    if(!dob) return false;
+    const today = new Date();
+    const birth = new Date(dob);
+    let age = today.getFullYear() - birth.getFullYear();
+    if(today.getMonth()<birth.getMonth()||(today.getMonth()===birth.getMonth()&&today.getDate()<birth.getDate())){
+      age--;
+    }
+    return age < 18;
+  }
+
+  // 表單送出
+  document.getElementById('waiverForm').onsubmit = async function(e) {
+    e.preventDefault();
+    if(signaturePad1.isEmpty()){
+      alert('請參與者簽名');
+      return;
+    }
+    if(isMinor() && signaturePad2.isEmpty()){
+      alert('未滿18歲必須由家長／監護人簽名');
+      return;
+    }
+    // 組資料
+    const formData = new FormData();
+    formData.append('name', document.getElementById('name').value);
+    formData.append('idnumber', document.getElementById('idnumber').value);
+    formData.append('gender', document.querySelector('input[name="gender"]:checked').value);
+    formData.append('dob', document.getElementById('dob').value);
+    formData.append('phone', document.getElementById('phone').value);
+    formData.append('emergency_contact', document.getElementById('emergency_contact').value);
+    formData.append('emergency_relation', document.getElementById('emergency_relation').value);
+    formData.append('emergency_phone', document.getElementById('emergency_phone').value);
+    formData.append('agree1', document.getElementById('agree1').checked ? '同意' : '');
+    formData.append('agree2', document.getElementById('agree2').checked ? '同意' : '');
+    formData.append('signature', signaturePad1.toDataURL());
+    formData.append('parent_signature', signaturePad2.isEmpty() ? '' : signaturePad2.toDataURL());
+    // 請換成你的 Google Apps Script 網址
+    const scriptURL = 'https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec';
+    try{
+      const res = await fetch(scriptURL, { method:'POST', body:formData });
+      if(res.ok){
+        document.getElementById('success-msg').style.display='block';
+        this.reset();
+        signaturePad1.clear();
+        signaturePad2.clear();
+        showStep(1);
+      }else{
+        alert('送出失敗，請稍後再試');
+      }
+    }catch(err){
+      alert('送出過程發生錯誤');
+    }
+  }
+</script>
+</body>
+</html>
