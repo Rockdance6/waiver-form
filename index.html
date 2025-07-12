@@ -374,29 +374,29 @@
     document.getElementById('clear2').onclick = ()=>signaturePad2.clear();
   };
 
-  // 滑動條款區塊到底自動傳遞到頁面
-  document.querySelectorAll('.terms-block').forEach(function(block){
-    block.addEventListener('touchstart', function(e){
-      this._startY = e.touches[0].clientY;
-    }, {passive:true});
-    block.addEventListener('touchmove', function(e){
-      const el = this;
-      const scrollTop = el.scrollTop;
-      const scrollHeight = el.scrollHeight;
-      const offsetHeight = el.offsetHeight;
-      const atTop = scrollTop === 0;
-      const atBottom = scrollTop + offsetHeight >= scrollHeight - 1;
-      const currentY = e.touches[0].clientY;
-      const up = (currentY > el._startY);
-      const down = (currentY < el._startY);
+  // 條款框滑到底/頂時自動傳遞給頁面（最佳自然體驗）
+document.querySelectorAll('.terms-block').forEach(function(block){
+  block.addEventListener('touchstart', function(e){
+    this._startY = e.touches[0].clientY;
+  }, {passive:true});
+  block.addEventListener('touchmove', function(e){
+    const el = this;
+    const scrollTop = el.scrollTop;
+    const scrollHeight = el.scrollHeight;
+    const offsetHeight = el.offsetHeight;
+    const atTop = scrollTop === 0;
+    const atBottom = scrollTop + offsetHeight >= scrollHeight - 1;
+    const currentY = e.touches[0].clientY;
+    const up = (currentY > el._startY);
+    const down = (currentY < el._startY);
 
-      if ((atTop && up) || (atBottom && down)) {
-        e.preventDefault();
-        e.stopPropagation();
-        window.scrollBy(0, el._startY - currentY);
-      }
-    }, {passive:false});
-  });
+    // 只有不是在頂/底時，才攔截事件，不然讓事件自然冒泡給頁面
+    if (!((atTop && up) || (atBottom && down))) {
+      e.stopPropagation();
+    }
+  }, {passive:false});
+});
+
 
   // 判斷年齡（未滿18必簽家長）
   function isMinor() {
