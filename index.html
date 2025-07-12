@@ -16,7 +16,7 @@
       border-radius: 10px;
       padding: 1em 1.2em;
       margin-bottom: 1.1em;
-      max-height: 380px;  /* 由原本 250px 拉高到 380px */
+      max-height: 380px;
       overflow-y: auto;
       font-size: 1.04em;
       color: #233;
@@ -35,7 +35,7 @@
     .radio-group label { font-weight: 400; color: #234; font-size: 1em; margin: 0; }
     .nav-btns { margin-top: 1.5em; display: flex; justify-content: space-between; gap: 0.6em; }
     .nav-btns button, .submit-btn {
-      background: #205087;
+      background: #2064bb;
       border: none;
       color: #fff;
       padding: 0.8em 2.1em;
@@ -48,7 +48,7 @@
       letter-spacing: 1px;
     }
     .nav-btns button:hover, .submit-btn:hover {
-      background: #123865;
+      background: #17497e;
     }
     .submit-btn { width: 100%; margin-top: 1.6em; }
     .canvas-block { margin: 1.7em 0 1.2em 0; }
@@ -253,18 +253,18 @@
     }
     // 組資料
     const formData = new FormData();
-    formData.append('name', document.getElementById('name').value);
-    formData.append('idnumber', document.getElementById('idnumber').value);
-    formData.append('gender', document.querySelector('input[name="gender"]:checked').value);
-    formData.append('dob', document.getElementById('dob').value);
-    formData.append('phone', document.getElementById('phone').value);
-    formData.append('emergency_contact', document.getElementById('emergency_contact').value);
-    formData.append('emergency_relation', document.getElementById('emergency_relation').value);
-    formData.append('emergency_phone', document.getElementById('emergency_phone').value);
-    formData.append('agree1', document.getElementById('agree1').checked ? '同意' : '');
-    formData.append('agree2', document.getElementById('agree2').checked ? '同意' : '');
-    formData.append('signature', signaturePad1.toDataURL());
-    formData.append('parent_signature', signaturePad2.isEmpty() ? '' : signaturePad2.toDataURL());
+    formData.append('姓名', document.getElementById('name').value);
+    formData.append('身分證字號', document.getElementById('idnumber').value);
+    formData.append('性別', document.querySelector('input[name="gender"]:checked').value);
+    formData.append('出生年月日', document.getElementById('dob').value);
+    formData.append('連絡電話', document.getElementById('phone').value);
+    formData.append('緊急聯絡人', document.getElementById('emergency_contact').value);
+    formData.append('緊急聯絡人關係', document.getElementById('emergency_relation').value);
+    formData.append('緊急聯絡人電話', document.getElementById('emergency_phone').value);
+    formData.append('條款1同意', document.getElementById('agree1').checked ? '同意' : '');
+    formData.append('條款2同意', document.getElementById('agree2').checked ? '同意' : '');
+    formData.append('參與者簽名', signaturePad1.toDataURL());
+    formData.append('家長簽名', signaturePad2.isEmpty() ? '' : signaturePad2.toDataURL());
     // 請換成你的 Google Apps Script 網址
     const scriptURL = 'https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec';
     try{
