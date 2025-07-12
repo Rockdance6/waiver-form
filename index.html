@@ -6,11 +6,12 @@
   <title>舞岩抱石攀岩館 責任風險承擔同意書</title>
   <script src="https://cdn.jsdelivr.net/npm/signature_pad@4.1.5/dist/signature_pad.umd.min.js"></script>
   <style>
+    :root { --main-blue: #2064bb; }
     body {
       font-family: 'Noto Sans TC', 'Microsoft JhengHei', 'PingFang TC', sans-serif;
       background: #f5f7fa;
       margin: 0;
-      color: #232629;
+      color: var(--main-blue);
     }
     .main-card {
       background: #fff;
@@ -31,19 +32,23 @@
     }
     .site-title {
       text-align: center;
-      color: #2064bb;
-      font-size: 2em;
-      font-weight: 800;
+      color: var(--main-blue);
+      font-size: 2.6em;
+      font-weight: 900;
       letter-spacing: 2px;
       margin-bottom: 0.2em;
       margin-top: 0;
       font-family: 'Noto Sans TC', 'Microsoft JhengHei', 'PingFang TC', sans-serif;
+      line-height: 1.1;
+    }
+    @media (max-width:600px) {
+      .site-title { font-size: 2em; }
     }
     h2.page-title {
       text-align: center;
-      color: #234e90;
+      color: var(--main-blue);
       margin: 0 0 1em 0;
-      font-size: 1.23em;
+      font-size: 1.28em;
       font-weight: 700;
       letter-spacing: 1.2px;
     }
@@ -55,27 +60,27 @@
       max-height: 570px;
       overflow-y: auto;
       font-size: 1.11em;
-      color: #233;
+      color: var(--main-blue);
       box-sizing: border-box;
     }
     @media (max-width:600px) {
       .main-card { max-width: 100vw; }
       .terms-block { max-height: 430px; font-size: 0.99em;}
-      .site-title { font-size: 1.38em; }
-      h2.page-title { font-size: 1.02em; }
+      .site-title { font-size: 2em; }
+      h2.page-title { font-size: 1.08em; }
     }
     .terms-block h3 {
       margin: 0.8em 0 0.2em 0;
-      color: #2260a7;
-      font-size: 1.06em;
+      color: var(--main-blue);
+      font-size: 1.09em;
       font-weight: bold;
       letter-spacing: 1px;
-      border-left: 4px solid #3774bb;
+      border-left: 4px solid var(--main-blue);
       padding-left: 0.55em;
     }
     .terms-block h4 {
       margin: 1.1em 0 0.4em 0;
-      color: #1a4077;
+      color: var(--main-blue);
       font-size: 1.01em;
       font-weight: bold;
       letter-spacing: 1px;
@@ -84,26 +89,26 @@
       margin: 0.15em 0 0.7em 1.7em;
       font-size: 0.99em;
       line-height: 1.8;
-      color: #233;
+      color: var(--main-blue);
       padding-left: 0.2em;
     }
     .terms-block li {margin-bottom: 0.44em;}
     .terms-block .sub-desc {
       margin: 0.35em 0 0.9em 0.8em;
-      color: #4a4c50;
+      color: var(--main-blue);
       font-size: 0.97em;
       line-height: 1.7;
     }
-    .checkbox-block { background: #f7fbff; border-radius: 8px; padding: 1em 1.2em; margin-bottom: 1.2em; display: flex; flex-direction: column; gap: 0.9em; font-size: 1.11em; }
-    .checkbox-block label { display: flex; align-items: flex-start; gap: 0.6em; font-weight: 500; color: #24518c; cursor: pointer;}
-    label { display: block; margin: 1em 0 0.2em 0; color: #23529d; font-weight: 500; letter-spacing: 1px; }
-    input[type="text"], input[type="tel"], input[type="date"], select { width: 100%; padding: 0.48em; border-radius: 6px; border: 1px solid #bcd; font-size: 1em; box-sizing: border-box; background: #f8fafc; transition: border .15s; }
+    .checkbox-block { background: #f7fbff; border-radius: 8px; padding: 1em 1.2em; margin-bottom: 1.2em; display: flex; flex-direction: column; gap: 0.9em; font-size: 1.11em; color: var(--main-blue);}
+    .checkbox-block label { display: flex; align-items: flex-start; gap: 0.6em; font-weight: 500; color: var(--main-blue); cursor: pointer;}
+    label { display: block; margin: 1em 0 0.2em 0; color: var(--main-blue); font-weight: 500; letter-spacing: 1px; }
+    input[type="text"], input[type="tel"], input[type="date"], select { width: 100%; padding: 0.48em; border-radius: 6px; border: 1px solid #bcd; font-size: 1em; box-sizing: border-box; background: #f8fafc; transition: border .15s; color: var(--main-blue);}
     input[type="text"]:focus, input[type="tel"]:focus, input[type="date"]:focus { outline: 2px solid #398be8; border-color: #398be8; }
     .radio-group { display: flex; gap: 2.2em; margin: 0.42em 0 0.8em 0; align-items: center; }
-    .radio-group label { font-weight: 400; color: #234; font-size: 1em; margin: 0; }
+    .radio-group label { font-weight: 400; color: var(--main-blue); font-size: 1em; margin: 0; }
     .nav-btns { margin-top: 1.5em; display: flex; justify-content: space-between; gap: 0.6em; }
     .nav-btns button, .submit-btn {
-      background: #2064bb;
+      background: var(--main-blue);
       border: none;
       color: #fff;
       padding: 0.8em 2.1em;
@@ -118,13 +123,28 @@
     .nav-btns button:hover, .submit-btn:hover { background: #17497e; }
     .submit-btn { width: 100%; margin-top: 1.6em; }
     .canvas-block { margin: 1.7em 0 1.2em 0; }
-    .canvas-block label { font-weight: 600; color: #234e90; margin-bottom: 0.5em; margin-top: 0.3em; }
+    .canvas-block label { font-weight: 600; color: var(--main-blue); margin-bottom: 0.5em; margin-top: 0.3em; }
     .sign-canvas { border: 1.5px solid #b4cdf7; border-radius: 10px; width: 100%; height: 120px; background: #fff; box-shadow: 0 2px 8px #3774bb18; touch-action: none; }
     .clear-btn { margin-top: 0.6em; background: #999; border: none; color: #fff; border-radius: 7px; padding: 0.45em 1.5em; font-size: 1em; font-weight: 500; cursor: pointer; transition: background 0.2s; margin-right: 0.7em; }
     .clear-btn:hover { background: #5d6673; }
     .err-msg { color: #dc3545; font-size: 0.97em; margin-top: 0.3em; margin-bottom: 0.4em; }
-    #success-msg { color: #188a2b; font-size: 1.13em; text-align: center; margin-top: 2em; }
+    #success-msg, #final-page { color: var(--main-blue); font-size: 1.13em; text-align: center; margin-top: 2em; }
     .page-title {margin-bottom: 1.5em;}
+    .final-btn {
+      display: inline-block;
+      margin-top: 2.1em;
+      background: var(--main-blue);
+      color: #fff;
+      border: none;
+      border-radius: 999px;
+      padding: 1em 2.8em;
+      font-size: 1.15em;
+      font-weight: bold;
+      cursor: pointer;
+      letter-spacing: 1.2px;
+      transition: background 0.18s;
+    }
+    .final-btn:hover { background: #17497e; }
   </style>
 </head>
 <body>
@@ -249,8 +269,14 @@
         </div>
         <button type="submit" class="submit-btn">送出</button>
       </div>
+      <!-- Step 5 成功頁 -->
+      <div id="final-page" style="display:none">
+        <div style="font-size:2.5em; margin-top:1.2em;">✅</div>
+        <div style="font-size:1.3em; margin: 1em 0 0.2em 0;"><b>已成功送出！</b></div>
+        <div style="font-size:1.06em;">感謝您填寫同意書，<br>祝您攀登愉快、平安順利！</div>
+        <button class="final-btn" id="more-btn" type="button">提交更多資料</button>
+      </div>
     </form>
-    <p id="success-msg" style="color: green; display: none;">✅ 已成功送出！</p>
   </div>
 </div>
 <script>
@@ -259,11 +285,13 @@
   const step2 = document.getElementById('step-2');
   const step3 = document.getElementById('step-3');
   const step4 = document.getElementById('step-4');
+  const finalPage = document.getElementById('final-page');
   function showStep(step) {
     step1.style.display = (step===1)?'block':'none';
     step2.style.display = (step===2)?'block':'none';
     step3.style.display = (step===3)?'block':'none';
     step4.style.display = (step===4)?'block':'none';
+    finalPage.style.display = (step===5)?'block':'none';
     window.scrollTo(0,0);
     if (step === 4) setTimeout(resizeAll, 50); // 進入簽名頁時重繪canvas
   }
@@ -294,7 +322,6 @@
         return;
       }
     }
-    // 檢查性別
     if(!document.querySelector('input[name="gender"]:checked')){
       alert('請選擇性別');
       return;
@@ -368,22 +395,26 @@
     formData.append('參與者簽名', signaturePad1.toDataURL());
     formData.append('家長簽名', signaturePad2.isEmpty() ? '' : signaturePad2.toDataURL());
     // Google Apps Script 網址
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbxlblDrtpX6XG0_NeD8WxAnLut3vyk0Z9MAhvMTUiYfAV78jllXpTTa0ZD9AfRRiHe3gg/exec';
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyAPGl3J0Ntz0FNWvCWiAL6NH6rmBEim6R9p50xrKTgUDPurGF_jzA1KTTuhLRmQGZ_/exec';
     try{
       const res = await fetch(scriptURL, { method:'POST', body:formData });
       if(res.ok){
-        document.getElementById('success-msg').style.display='block';
-        this.reset();
+        showStep(5); // 跳到成功頁
+        document.getElementById('waiverForm').reset();
         signaturePad1.clear();
         signaturePad2.clear();
-        showStep(1);
       }else{
         alert('送出失敗，請稍後再試');
       }
     }catch(err){
       alert('送出過程發生錯誤');
     }
-  }
+  };
+
+  // 成功頁：再填一份
+  document.getElementById('more-btn').onclick = function() {
+    showStep(1);
+  };
 </script>
 </body>
 </html>
