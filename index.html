@@ -6,39 +6,83 @@
   <title>舞岩抱石攀岩館 責任風險承擔同意書</title>
   <script src="https://cdn.jsdelivr.net/npm/signature_pad@4.1.5/dist/signature_pad.umd.min.js"></script>
   <style>
-    body { font-family: 'Noto Sans TC', 'Microsoft JhengHei', 'PingFang TC', sans-serif; background: #f5f7fa; margin: 0; color: #232629; }
+    body {
+      font-family: 'Noto Sans TC', 'Microsoft JhengHei', 'PingFang TC', sans-serif;
+      background: #f5f7fa;
+      margin: 0;
+      color: #232629;
+    }
     .main-card {
       background: #fff;
       max-width: 600px;
       margin: 2em auto;
       border-radius: 18px;
       box-shadow: 0 4px 18px #2260a71c;
-      padding: 2em 2em 1.4em 2em;
+      padding: 2em 2.2em 1.4em 2.2em;
       position: relative;
     }
     @media (max-width:700px) {
-      .main-card { padding: 1.1em 0.15em 1.2em 0.15em; border-radius: 0; margin: 0; }
+      .main-card {
+        padding: 1.1em 4vw 1.2em 4vw;
+        border-radius: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
     }
-    h2 { text-align: center; color: #2064bb; margin: 0 0 0.7em 0; font-size: 1.35em; letter-spacing: 1.5px; font-weight: 700; }
-    .step-indicator { text-align: center; margin-bottom: 1.1em; color: #3774bb; letter-spacing: 1px; font-size: 1.01em; font-weight: 600; }
+    h2 {
+      text-align: center;
+      color: #2064bb;
+      margin: 0 0 0.7em 0;
+      font-size: 1.35em;
+      letter-spacing: 1.5px;
+      font-weight: 700;
+    }
     .terms-block {
       background: #e9f0fb;
       border-radius: 10px;
-      padding: 1em 1.2em;
+      padding: 1.5em 1.3em 1.3em 1.3em;
       margin-bottom: 1.1em;
-      max-height: 330px;
+      max-height: 420px;
       overflow-y: auto;
-      font-size: 1.06em;
+      font-size: 1.07em;
       color: #233;
+      box-sizing: border-box;
     }
     @media (max-width:600px) {
       .main-card { max-width: 100vw; }
-      .terms-block { max-height: 260px; font-size: 0.98em;}
+      .terms-block { max-height: 300px; font-size: 0.97em;}
       h2 { font-size: 1.08em;}
     }
-    .terms-block h3 { margin: 0.6em 0 0.2em 0; color: #2260a7; font-size: 1.04em; font-weight: bold; border-left: 4px solid #3774bb; padding-left: 0.5em; letter-spacing: 1px; }
-    .terms-block ul { margin: 0.4em 0 0.7em 1.8em; font-size: 0.99em; line-height: 1.8; color: #233; padding-left: 0;}
-    .terms-block li {margin-bottom: 0.48em;}
+    .terms-block h3 {
+      margin: 0.8em 0 0.2em 0;
+      color: #2260a7;
+      font-size: 1.06em;
+      font-weight: bold;
+      letter-spacing: 1px;
+      border-left: 4px solid #3774bb;
+      padding-left: 0.55em;
+    }
+    .terms-block h4 {
+      margin: 1.1em 0 0.4em 0;
+      color: #1a4077;
+      font-size: 1.01em;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+    .terms-block ul {
+      margin: 0.15em 0 0.7em 1.7em;
+      font-size: 0.99em;
+      line-height: 1.8;
+      color: #233;
+      padding-left: 0.2em;
+    }
+    .terms-block li {margin-bottom: 0.44em;}
+    .terms-block .sub-desc {
+      margin: 0.35em 0 0.9em 0.8em;
+      color: #4a4c50;
+      font-size: 0.97em;
+      line-height: 1.7;
+    }
     .checkbox-block { background: #f7fbff; border-radius: 8px; padding: 1em 1.2em; margin-bottom: 1.2em; display: flex; flex-direction: column; gap: 0.9em; font-size: 1.11em; }
     .checkbox-block label { display: flex; align-items: flex-start; gap: 0.6em; font-weight: 500; color: #24518c; cursor: pointer;}
     label { display: block; margin: 1em 0 0.2em 0; color: #23529d; font-weight: 500; letter-spacing: 1px; }
@@ -74,35 +118,54 @@
 <body>
 <div class="main-card">
   <h2>舞岩抱石攀岩館 責任風險承擔同意書</h2>
-  <!-- <img src="你的logo網址" class="logo" alt="logo"> -->
   <div id="form-stepper">
     <form id="waiverForm" autocomplete="off">
       <!-- Step 1 條款一 -->
       <div id="step-1" style="display:block">
-        <div class="step-indicator">第 1 步：閱讀《責任與風險承擔同意書》並勾選同意</div>
-        <div class="terms-block" style="margin-bottom: 1.1em;">
+        <div class="terms-block">
           <h3>《責任與風險承擔同意書》</h3>
+          <div class="sub-desc">為了確保您的安全與知情權，請詳閱本同意書內容。</div>
+          <h4>一、活動風險告知</h4>
+          <div class="sub-desc">
+            本人知悉並理解參與攀岩或相關運動具有以下潛在風險，包括但不限於：
+          </div>
           <ul>
-            <li>本人了解攀岩與抱石活動有一定風險，包括但不限於扭傷、拉傷、骨折、瘀青、擦傷等身體損傷。</li>
-            <li>本人確認身心健康，無不適合劇烈運動之疾病（如心臟病、癲癇、懷孕等）。</li>
-            <li>本人知悉即使遵守所有安全規範，仍有受傷風險，並願意自行承擔所有風險與責任。</li>
-            <li>本人會遵守工作人員指示與規範，若感身體不適或發現危險，會主動通報並停止活動。</li>
-            <li>本人同意若因自己疏忽、違規或未經授權操作而導致意外，將自行負責，並放棄對舞岩抱石攀岩館及其工作人員之一切追訴或賠償要求。</li>
-            <li>本人同意若自身行為導致第三人受損害，將自行負擔相應賠償責任。</li>
-            <li>舞岩抱石攀岩館僅提供場地責任險，建議參與者自行投保運動傷害險。</li>
-            <li>本人同意舞岩抱石攀岩館可紀錄並使用本人活動照片及影像於宣傳用途（不同意請主動告知工作人員）。</li>
+            <li>身體損傷（如扭傷、拉傷、骨折、瘀青、擦傷等）</li>
+            <li>器材使用不當</li>
+            <li>與他人碰撞或場地內意外</li>
+            <li>任何因參與本活動而導致的心理或身體不適</li>
           </ul>
+          <div class="sub-desc">
+            本人理解即使遵守所有安全規定，這些風險無法完全避免，且本人願意自行承擔所有風險。
+          </div>
+          <h4>二、參與者聲明</h4>
+          <ol>
+            <li>本人保證身心健康，無不適合從事劇烈運動之疾病或心理問題（如心臟病、癲癇、懷孕等）。</li>
+            <li>本人將遵守工作人員指示與安全規範，不進行危險行為或未經授權之操作。</li>
+            <li>本人同意在攀岩過程中隨時注意自身及他人的安全，並遵守基本的攀岩禮節和場館安全規範。在攀爬過程中，若發現安全隱患或不適，將立即停止並向場館工作人員報告。</li>
+            <li>本人已完整閱讀並理解活動規則及風險說明，願意自行承擔活動中可能產生之風險與責任。</li>
+          </ol>
+          <h4>三、免責與賠償聲明</h4>
+          <ol>
+            <li>本人同意如因本人行為不當、違反規定、個人疏忽或其他非場地方責任因素所導致之任何事故、傷害、財物損失，將自行負責，並放棄對舞岩抱石攀岩館館方、教練或工作人員之一切追訴或賠償要求。</li>
+            <li>如本人行為導致第三人受損害，願意自行負擔相應賠償責任。</li>
+            <li>舞岩抱石攀岩館提供基本的場地保險，該保險僅涵蓋場館內設施的意外責任，不涵蓋參與者個人健康或意外風險。建議參與者自行投保額外的運動意外險以增加保障。</li>
+          </ol>
+          <h4>四、個人資料使用</h4>
+          <div class="sub-desc">
+            本人同意舞岩抱石攀岩館有權拍攝本人參與活動過程中的照片及影像，並可將其用於紀錄、宣傳或其他商業用途。如不同意該用途，本人將提前通知工作人員。
+          </div>
         </div>
         <div class="checkbox-block">
           <label><input type="checkbox" id="agree1" required> 我已詳細閱讀並同意上述條款內容</label>
         </div>
         <div class="nav-btns">
+          <span></span>
           <button type="button" id="to-step-2">下一頁</button>
         </div>
       </div>
       <!-- Step 2 條款二 -->
       <div id="step-2" style="display:none">
-        <div class="step-indicator">第 2 步：閱讀《入場須知與安全守則》並勾選同意</div>
         <div class="terms-block" style="margin-bottom: 1.1em;">
           <h3>《入場須知與安全守則》</h3>
           <ul>
@@ -136,7 +199,6 @@
       </div>
       <!-- Step 3 個人資料 -->
       <div id="step-3" style="display:none">
-        <div class="step-indicator">第 3 步：填寫個人及緊急聯絡資料</div>
         <label>姓名<input type="text" id="name" required></label>
         <label>身分證字號<input type="text" id="idnumber" required></label>
         <div class="radio-group">
@@ -155,7 +217,6 @@
       </div>
       <!-- Step 4 簽名 -->
       <div id="step-4" style="display:none">
-        <div class="step-indicator">第 4 步：簽名</div>
         <div class="canvas-block">
           <label>參與者簽名（必填）</label>
           <canvas id="signature1" class="sign-canvas"></canvas>
@@ -283,7 +344,7 @@
     formData.append('條款2同意', document.getElementById('agree2').checked ? '同意' : '');
     formData.append('參與者簽名', signaturePad1.toDataURL());
     formData.append('家長簽名', signaturePad2.isEmpty() ? '' : signaturePad2.toDataURL());
-    // 用你的 Google Apps Script 網址
+    // Google Apps Script 網址
     const scriptURL = 'https://script.google.com/macros/s/AKfycbxlblDrtpX6XG0_NeD8WxAnLut3vyk0Z9MAhvMTUiYfAV78jllXpTTa0ZD9AfRRiHe3gg/exec';
     try{
       const res = await fetch(scriptURL, { method:'POST', body:formData });
