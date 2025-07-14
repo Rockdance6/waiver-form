@@ -1,462 +1,558 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="zh-TW">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>舞岩抱石攀岩館 責任風險承擔同意書</title>
   <script src="https://cdn.jsdelivr.net/npm/signature_pad@4.1.5/dist/signature_pad.umd.min.js"></script>
   <style>
-    :root { --main-blue: #2064bb; }
-    body {
-      font-family: 'Noto Sans TC', 'Microsoft JhengHei', 'PingFang TC', sans-serif;
-      background: #f5f7fa;
-      margin: 0;
-      color: #232629;
-    }
-    .main-card {
-      background: #fff;
-      max-width: 600px;
-      margin: 2em auto;
-      border-radius: 18px;
-      box-shadow: 0 4px 18px #2260a71c;
-      padding: 2em 2.2em 1.4em 2.2em;
-      position: relative;
-    }
-    @media (max-width:700px) {
-      .main-card {
-        padding: 1.1em 4vw 1.2em 4vw;
-        border-radius: 0;
-        margin: 0;
-        box-sizing: border-box;
-      }
-    }
-    .site-title {
-      text-align: center;
-      color: var(--main-blue);
-      font-size: 2.6em;
-      font-weight: 900;
-      letter-spacing: 2px;
-      margin-bottom: 0.2em;
-      margin-top: 0;
-      font-family: 'Noto Sans TC', 'Microsoft JhengHei', 'PingFang TC', sans-serif;
-      line-height: 1.1;
-    }
-    @media (max-width:600px) {
-      .site-title { font-size: 2em; }
-    }
-    h2.page-title {
-      text-align: center;
-      color: var(--main-blue);
-      margin: 0 0 1em 0;
-      font-size: 1.28em;
-      font-weight: 700;
-      letter-spacing: 1.2px;
-    }
-    .terms-block {
-      background: #e9f0fb;
-      border-radius: 10px;
-      padding: 1.6em 1.3em 1.3em 1.3em;
-      margin-bottom: 1.1em;
-      max-height: 570px;
-      overflow-y: auto;
-      font-size: 1.11em;
-      color: #233;
-      box-sizing: border-box;
-      -webkit-overflow-scrolling: touch;
-    }
-    @media (max-width:600px) {
-      .main-card { max-width: 100vw; }
-      .terms-block { max-height: 430px; font-size: 0.99em;}
-      .site-title { font-size: 2em; }
-      h2.page-title { font-size: 1.08em; }
-    }
-    .terms-block h3, .terms-block h4 {
-      color: var(--main-blue);
-    }
-    .terms-block h3 {
-      margin: 0.8em 0 0.2em 0;
-      font-size: 1.09em;
-      font-weight: bold;
-      letter-spacing: 1px;
-      border-left: 4px solid var(--main-blue);
-      padding-left: 0.55em;
-    }
-    .terms-block h4 {
-      margin: 1.1em 0 0.4em 0;
-      font-size: 1.01em;
-      font-weight: bold;
-      letter-spacing: 1px;
-    }
-    .terms-block ul {
-      margin: 0.15em 0 0.7em 1.7em;
-      font-size: 0.99em;
-      line-height: 1.8;
-      color: #233;
-      padding-left: 0.2em;
-    }
+    body { font-family: 'Noto Sans TC', 'Microsoft JhengHei', 'PingFang TC', sans-serif; background: #f5f7fa; margin: 0; color: #232629; }
+    .main-card { background: #fff; max-width: 600px; margin: 2em auto; border-radius: 18px; box-shadow: 0 4px 18px #2260a71c; padding: 2em 2.2em 1.4em 2.2em; position: relative; }
+    @media (max-width:700px) { .main-card { padding: 1.1em 4vw 1.2em 4vw; border-radius: 0; margin: 0; box-sizing: border-box; } }
+    .site-title { text-align: center; color: #2064bb; font-size: 2.6em; font-weight: 900; margin-bottom: 0.2em; margin-top: 0;}
+    h2.page-title { text-align: center; color: #2064bb; margin: 0 0 1em 0; font-size: 1.28em; font-weight: 700;}
+    .terms-block, .terms-block * { text-align: left !important;}
+    .terms-block { background: #e9f0fb; border-radius: 10px; padding: 1.6em 1.3em 1.3em 1.3em; margin-bottom: 1.1em; font-size: 1.11em;}
+    .terms-block h3, .terms-block h4 { color: #2064bb; margin-top: 0.7em; }
+    .terms-block h3 { margin-bottom: 0.2em; font-size: 1.08em; border-left: 4px solid #2064bb; padding-left: 0.5em;}
+    .terms-block .sub-desc { margin: 0.35em 0 0.9em 0.8em; color: #4a4c50; font-size: 0.97em; line-height: 1.7;}
+    .terms-block ul, .terms-block ol { padding-left: 1.4em; }
     .terms-block li {margin-bottom: 0.44em;}
-    .terms-block .sub-desc {
-      margin: 0.35em 0 0.9em 0.8em;
-      color: #4a4c50;
-      font-size: 0.97em;
-      line-height: 1.7;
-    }
-    .checkbox-block { background: #f7fbff; border-radius: 8px; padding: 1em 1.2em; margin-bottom: 1.2em; display: flex; flex-direction: column; gap: 0.9em; font-size: 1.11em; color: var(--main-blue);}
-    .checkbox-block label { display: flex; align-items: flex-start; gap: 0.6em; font-weight: 500; color: var(--main-blue); cursor: pointer;}
-    label { display: block; margin: 1em 0 0.2em 0; color: var(--main-blue); font-weight: 500; letter-spacing: 1px; }
-    input[type="text"], input[type="tel"], input[type="date"], select { width: 100%; padding: 0.48em; border-radius: 6px; border: 1px solid #bcd; font-size: 1em; box-sizing: border-box; background: #f8fafc; transition: border .15s; color: #232629;}
-    input[type="text"]:focus, input[type="tel"]:focus, input[type="date"]:focus { outline: 2px solid #398be8; border-color: #398be8; }
-    .radio-group { display: flex; gap: 2.2em; margin: 0.42em 0 0.8em 0; align-items: center; }
-    .radio-group label { font-weight: 400; color: #232629; font-size: 1em; margin: 0; }
+    .checkbox-block { background: #f7fbff; border-radius: 8px; padding: 1em 1.2em; margin-bottom: 1.2em; }
+    .radio-group { display: flex; gap: 2em; margin: 0.2em 0 0.85em 0; }
     .nav-btns { margin-top: 1.5em; display: flex; justify-content: space-between; gap: 0.6em; }
-    .nav-btns button, .submit-btn {
-      background: var(--main-blue);
-      border: none;
-      color: #fff;
-      padding: 0.8em 2.1em;
-      border-radius: 999px;
-      font-size: 1.13em;
-      font-weight: bold;
-      box-shadow: 0 2px 10px #0c237a18;
-      cursor: pointer;
-      transition: background 0.15s;
-      letter-spacing: 1px;
-    }
-    .nav-btns button:hover, .submit-btn:hover { background: #17497e; }
+    .nav-btns button, .submit-btn { background: #2064bb; color: #fff; border: none; padding: 0.8em 2.1em; border-radius: 999px; font-size: 1.13em; font-weight: bold; box-shadow: 0 2px 10px #0c237a18; cursor: pointer;}
     .submit-btn { width: 100%; margin-top: 1.6em; }
-    .canvas-block { margin: 1.7em 0 1.2em 0; }
-    .canvas-block label { font-weight: 600; color: var(--main-blue); margin-bottom: 0.5em; margin-top: 0.3em; }
-    .sign-canvas {
-      border: 1.5px solid #b4cdf7;
-      border-radius: 10px;
-      width: 100%;
-      height: 120px;
-      background: #fff;
-      box-shadow: 0 2px 8px #3774bb18;
-      touch-action: none;
-      user-select: none;
-      -webkit-user-select: none;
-      -webkit-touch-callout: none;
-      -webkit-tap-highlight-color: transparent;
+    .canvas-block { margin: 1.7em 0 1.2em 0;}
+    .sign-canvas { border: 1.5px solid #b4cdf7; border-radius: 10px; width: 100%; height: 120px; background: #fff; box-shadow: 0 2px 8px #3774bb18; touch-action: none; user-select: none !important; -webkit-user-select: none !important; }
+    .canvas-block, .canvas-block *, .sign-canvas { user-select: none !important; -webkit-user-select: none !important; -webkit-touch-callout: none !important; -webkit-tap-highlight-color: transparent !important; }
+    .clear-btn { margin-top: 0.6em; background: #999; border: none; color: #fff; border-radius: 7px; padding: 0.45em 1.5em; font-size: 1em;}
+    #final-page { color: #2064bb; font-size: 1.13em; text-align: center; margin-top: 2em; }
+    #langSwitcherRow {
+      position: absolute; left: 0.7em; bottom: 1.2em; z-index: 10; display: flex; align-items: flex-end; width: 160px; pointer-events: auto;
     }
-    .clear-btn { margin-top: 0.6em; background: #999; border: none; color: #fff; border-radius: 7px; padding: 0.45em 1.5em; font-size: 1em; font-weight: 500; cursor: pointer; transition: background 0.2s; margin-right: 0.7em; }
-    .clear-btn:hover { background: #5d6673; }
-    .err-msg { color: #dc3545; font-size: 0.97em; margin-top: 0.3em; margin-bottom: 0.4em; }
-    #success-msg, #final-page { color: var(--main-blue); font-size: 1.13em; text-align: center; margin-top: 2em; }
-    .page-title {margin-bottom: 1.5em;}
-    .final-btn {
-      display: inline-block;
-      margin-top: 2.1em;
-      background: var(--main-blue);
-      color: #fff;
-      border: none;
-      border-radius: 999px;
-      padding: 1em 2.8em;
-      font-size: 1.15em;
-      font-weight: bold;
-      cursor: pointer;
-      letter-spacing: 1.2px;
-      transition: background 0.18s;
+    @media (max-width: 700px) {
+      #langSwitcherRow { left: 0.2em; bottom: 0.7em; width: 130px;}
     }
-    .final-btn:hover { background: #17497e; }
+    #langSwitcher { font-size: 1.05em; padding: 0.32em 0.5em; border-radius: 7px; border: 1px solid #b6c2d1;}
+    .form-field {
+      display: flex; flex-direction: column; gap: 0.35em; margin-bottom: 1.1em;
+    }
+    .form-field label { font-weight: 500; margin-bottom: 0.18em;}
+    .form-field input[type="text"],
+    .form-field input[type="tel"],
+    .form-field input[type="date"] {
+      font-size: 1.08em; padding: 0.39em 0.6em; border: 1px solid #bdd3ef;
+      border-radius: 6px; background: #f8fbfd; margin-top: 0.1em; margin-bottom: 0.06em;
+      width: 100%; box-sizing: border-box;
+    }
+    @media (max-width: 600px) {
+      .form-field { gap: 0.25em; margin-bottom: 0.74em;}
+      .form-field input { font-size: 0.99em;}
+    }
   </style>
 </head>
 <body>
 <div class="main-card">
-  <div class="site-title">舞岩抱石攀岩館</div>
-  <div id="form-stepper">
-    <form id="waiverForm" autocomplete="off">
-      <!-- Step 1 條款一 -->
-      <div id="step-1" style="display:block">
-        <h2 class="page-title">責任與風險承擔同意書</h2>
-        <div class="terms-block">
-          <h3>《責任與風險承擔同意書》</h3>
-          <div class="sub-desc">為了確保您的安全與知情權，請詳閱本同意書內容。</div>
-          <h4>一、活動風險告知</h4>
-          <div class="sub-desc">
-            本人知悉並理解參與攀岩或相關運動具有以下潛在風險，包括但不限於：
-          </div>
-          <ul>
-            <li>身體損傷（如扭傷、拉傷、骨折、瘀青、擦傷等）</li>
-            <li>器材使用不當</li>
-            <li>與他人碰撞或場地內意外</li>
-            <li>任何因參與本活動而導致的心理或身體不適</li>
-          </ul>
-          <div class="sub-desc">
-            本人理解即使遵守所有安全規定，這些風險無法完全避免，且本人願意自行承擔所有風險。
-          </div>
-          <h4>二、參與者聲明</h4>
-          <ol>
-            <li>本人保證身心健康，無不適合從事劇烈運動之疾病或心理問題（如心臟病、癲癇、懷孕等）。</li>
-            <li>本人將遵守工作人員指示與安全規範，不進行危險行為或未經授權之操作。</li>
-            <li>本人同意在攀岩過程中隨時注意自身及他人的安全，並遵守基本的攀岩禮節和場館安全規範。在攀爬過程中，若發現安全隱患或不適，將立即停止並向場館工作人員報告。</li>
-            <li>本人已完整閱讀並理解活動規則及風險說明，願意自行承擔活動中可能產生之風險與責任。</li>
-          </ol>
-          <h4>三、免責與賠償聲明</h4>
-          <ol>
-            <li>本人同意如因本人行為不當、違反規定、個人疏忽或其他非場地方責任因素所導致之任何事故、傷害、財物損失，將自行負責，並放棄對舞岩抱石攀岩館館方、教練或工作人員之一切追訴或賠償要求。</li>
-            <li>如本人行為導致第三人受損害，願意自行負擔相應賠償責任。</li>
-            <li>舞岩抱石攀岩館提供基本的場地保險，該保險僅涵蓋場館內設施的意外責任，不涵蓋參與者個人健康或意外風險。建議參與者自行投保額外的運動意外險以增加保障。</li>
-          </ol>
-          <h4>四、個人資料使用</h4>
-          <div class="sub-desc">
-            本人同意舞岩抱石攀岩館有權拍攝本人參與活動過程中的照片及影像，並可將其用於紀錄、宣傳或其他商業用途。如不同意該用途，本人將提前通知工作人員。
-          </div>
-        </div>
-        <div class="checkbox-block">
-          <label><input type="checkbox" id="agree1" required> 我已詳細閱讀並同意上述條款內容</label>
-        </div>
-        <div class="nav-btns">
-          <span></span>
-          <button type="button" id="to-step-2">下一頁</button>
+  <div class="site-title" id="siteTitle">舞岩抱石攀岩館</div>
+  <form id="waiverForm" autocomplete="off">
+    <!-- Step 1 條款一 -->
+    <div id="step-1" style="display:block; position:relative;">
+      <h2 class="page-title" id="pageTitle1">責任與風險承擔同意書</h2>
+      <div class="terms-block" id="terms1"></div>
+      <div class="checkbox-block">
+        <label><input type="checkbox" id="agree1" required> <span id="agree1text"></span></label>
+      </div>
+      <div class="nav-btns">
+        <span></span>
+        <button type="button" id="to-step-2">下一頁</button>
+      </div>
+      <div id="langSwitcherRow">
+        <select id="langSwitcher" class="lang-switcher">
+          <option value="zh-TW">繁體中文</option>
+          <option value="en">English</option>
+          <option value="ja">日本語</option>
+        </select>
+      </div>
+    </div>
+    <!-- Step 2 條款二 -->
+    <div id="step-2" style="display:none">
+      <h2 class="page-title" id="pageTitle2">入場須知與安全守則</h2>
+      <div class="terms-block" id="terms2"></div>
+      <div class="checkbox-block">
+        <label><input type="checkbox" id="agree2" required> <span id="agree2text"></span></label>
+      </div>
+      <div class="nav-btns">
+        <button type="button" id="to-step-1">上一頁</button>
+        <button type="button" id="to-step-3">下一頁</button>
+      </div>
+    </div>
+    <!-- Step 3 基本資料 -->
+    <div id="step-3" style="display:none">
+      <h2 class="page-title" id="pageTitle3">基本資料填寫</h2>
+      <div class="form-field">
+        <label id="labelName" for="name">姓名</label>
+        <input type="text" id="name" required>
+      </div>
+      <div class="form-field">
+        <label id="labelIdnumber" for="idnumber">身分證字號</label>
+        <input type="text" id="idnumber" required>
+      </div>
+      <div class="form-field">
+        <label id="labelGender">性別</label>
+        <div class="radio-group" id="genderGroup">
+          <label><input type="radio" name="gender" value="男" required id="genderM"> <span id="genderMText">男</span></label>
+          <label><input type="radio" name="gender" value="女" required id="genderF"> <span id="genderFText">女</span></label>
         </div>
       </div>
-      <!-- Step 2 入場須知（依截圖分段） -->
-      <div id="step-2" style="display:none">
-        <h2 class="page-title">入場須知與安全守則</h2>
-        <div class="terms-block">
-          <h3>《入場須知與安全守則》</h3>
-          <div class="sub-desc" style="margin-top:0;">
-            舞岩抱石攀岩館（以下簡稱本館）致力於為使用者打造一個安全的攀登環境，為維護每位攀登者的健康與安全，並確保場館內的秩序與規範，所有進入本館的使用者必須詳細閱讀並遵守本守則，以確保自身及他人之安全。
-          </div>
-          <ul>
-            <li>入館前請完成登記與付費，攀登者請務必向工作人員確認安全墜落姿勢。</li>
-            <li>除攀岩體驗外，5歲以下不得參與攀岩活動；未滿9歲（或未滿國小三年級）之兒童，必須由家長或法定監護人陪同負責其安全；未滿18歲者需由監護人簽署同意書。</li>
-            <li>進行抱石活動時，請著攀岩鞋，不得赤腳攀爬。</li>
-            <li>攀登區禁止飲食。水壺請放置於指定之位置。</li>
-            <li>請勿將物品放於軟墊上。</li>
-            <li>本館全面禁煙、口香糖、檳榔及含酒精飲料。</li>
-            <li>本館內嚴禁奔跑、打鬧或玩耍。</li>
-            <li>通過攀登區時，應隨時注意岩牆上之攀登者動向，在不影響攀登者的情況下盡速通過。</li>
-            <li>嚴禁在軟墊上逗留。</li>
-            <li>攀登者應根據自身身體狀況進行攀爬，避免超過身體極限負荷，並確實熱身與收操，以防運動傷害。</li>
-            <li>攀岩過程中，除自身安全外，也須注意他人的安全，並隨時注意他人的攀爬動向，避免發生撞擊危險。</li>
-            <li>請依照「安全墜落」之觀念進行墜落，且避免墜落於軟墊邊緣，以免發生危險。</li>
-            <li>若有發現岩塊鬆動或是其他設施異常，請立即通知現場工作人員。</li>
-            <li>非本館工作人員，請勿拆除或轉動岩塊。</li>
-            <li>蓄意破壞或盜竊館設備，除依法嚴辦外，須照價賠償。</li>
-            <li>本館禁止進行私人教學行為。</li>
-            <li>請勿攜帶本館工作人員認定之危險物品入館。</li>
-            <li>若發現有參與者違反安全使用規範或不遵守場館規範，工作人員可隨時進行制止，並視情況進行必要的處理。</li>
-            <li>以上若有未盡事宜，本館工作人員得依現場狀況做適當處置，並修改相關辦法。</li>
-          </ul>
-        </div>
-        <div class="checkbox-block">
-          <label><input type="checkbox" id="agree2" required> 我已知悉並同意遵守入場須知與安全守則</label>
-        </div>
-        <div class="nav-btns">
-          <button type="button" id="to-step-1">上一步</button>
-          <button type="button" id="to-step-3">下一頁</button>
-        </div>
+      <div class="form-field">
+        <label id="labelDob" for="dob">出生年月日</label>
+        <input type="date" id="dob" required>
+        <span id="dobFormatTip" style="color:#6684b5; font-size:0.96em; margin-top:2px;"></span>
       </div>
-      <!-- Step 3 個人資料 -->
-      <div id="step-3" style="display:none">
-        <h2 class="page-title">基本資料填寫</h2>
-        <label>姓名<input type="text" id="name" required></label>
-        <label>身分證字號<input type="text" id="idnumber" required></label>
-        <label>性別</label>
-        <div class="radio-group">
-          <label><input type="radio" name="gender" value="男" required> 男</label>
-          <label><input type="radio" name="gender" value="女" required> 女</label>
-        </div>
-        <label>出生年月日<input type="date" id="dob" required></label>
-        <label>連絡電話<input type="tel" id="phone" required></label>
-        <label>緊急聯絡人<input type="text" id="emergency_contact" required></label>
-        <label>緊急聯絡人關係<input type="text" id="emergency_relation" required></label>
-        <label>緊急聯絡人電話<input type="tel" id="emergency_phone" required></label>
-        <div class="nav-btns">
-          <button type="button" id="to-step-2b">上一步</button>
-          <button type="button" id="to-step-4">下一頁</button>
-        </div>
+      <div class="form-field">
+        <label id="labelPhone" for="phone">連絡電話</label>
+        <input type="tel" id="phone" required>
       </div>
-      <!-- Step 4 簽名 -->
-      <div id="step-4" style="display:none">
-        <h2 class="page-title">電子簽名確認</h2>
-        <div class="canvas-block">
-          <label>參與者簽名（必填）</label>
-          <canvas id="signature1" class="sign-canvas"></canvas>
-          <button type="button" class="clear-btn" id="clear1">清除簽名</button>
-        </div>
-        <div class="canvas-block">
-          <label>家長／監護人簽名（如未滿18歲必填）</label>
-          <canvas id="signature2" class="sign-canvas"></canvas>
-          <button type="button" class="clear-btn" id="clear2">清除簽名</button>
-        </div>
-        <div class="nav-btns">
-          <button type="button" id="to-step-3b">上一步</button>
-        </div>
-        <button type="submit" class="submit-btn">送出</button>
+      <div class="form-field">
+        <label id="labelEmgContact" for="emergency_contact">緊急聯絡人</label>
+        <input type="text" id="emergency_contact" required>
       </div>
-      <!-- Step 5 成功頁 -->
-      <div id="final-page" style="display:none">
-        <div style="font-size:2.5em; margin-top:1.2em; color:var(--main-blue);">✅</div>
-        <div style="font-size:1.3em; margin: 1em 0 0.2em 0; color:var(--main-blue);"><b>已成功送出！</b></div>
-        <div style="font-size:1.06em; color:#232629;">感謝您填寫同意書，<br>祝您攀登愉快、平安順利！</div>
-        <button class="final-btn" id="more-btn" type="button">提交更多資料</button>
+      <div class="form-field">
+        <label id="labelEmgRelation" for="emergency_relation">緊急聯絡人關係</label>
+        <input type="text" id="emergency_relation" required>
       </div>
-    </form>
-  </div>
+      <div class="form-field">
+        <label id="labelEmgPhone" for="emergency_phone">緊急聯絡人電話</label>
+        <input type="tel" id="emergency_phone" required>
+      </div>
+      <div class="nav-btns">
+        <button type="button" id="to-step-2b">上一步</button>
+        <button type="button" id="to-step-4">下一頁</button>
+      </div>
+    </div>
+    <!-- Step 4 簽名 -->
+    <div id="step-4" style="display:none">
+      <h2 class="page-title" id="pageTitle4">電子簽名確認</h2>
+      <div class="canvas-block">
+        <label id="labelSign1">參與者簽名（必填）</label>
+        <canvas id="signature1" class="sign-canvas"></canvas>
+        <button type="button" class="clear-btn" id="clear1">清除簽名</button>
+      </div>
+      <div class="canvas-block">
+        <label id="labelSign2">家長／監護人簽名（如未滿18歲必填）</label>
+        <canvas id="signature2" class="sign-canvas"></canvas>
+        <button type="button" class="clear-btn" id="clear2">清除簽名</button>
+      </div>
+      <div class="nav-btns">
+        <button type="button" id="to-step-3b">上一步</button>
+      </div>
+      <button type="submit" class="submit-btn" id="submitBtn">送出</button>
+    </div>
+    <!-- Step 5 完成頁 -->
+    <div id="final-page" style="display:none">
+      <div style="font-size:2.5em; margin-top:1.2em; color:#2064bb;">✅</div>
+      <div style="font-size:1.3em; margin: 1em 0 0.2em 0; color:#2064bb;" id="successTitle"><b>已成功送出！</b></div>
+      <div style="font-size:1.06em; color:#232629;" id="successMsg">感謝您填寫同意書，<br>祝您攀登愉快、平安順利！</div>
+      <button class="submit-btn" id="more-btn" type="button" style="width:auto;">提交更多資料</button>
+    </div>
+  </form>
 </div>
 <script>
-  // --- 分頁切換 ---
-  const step1 = document.getElementById('step-1');
-  const step2 = document.getElementById('step-2');
-  const step3 = document.getElementById('step-3');
-  const step4 = document.getElementById('step-4');
-  const finalPage = document.getElementById('final-page');
-  function showStep(step) {
-    step1.style.display = (step===1)?'block':'none';
-    step2.style.display = (step===2)?'block':'none';
-    step3.style.display = (step===3)?'block':'none';
-    step4.style.display = (step===4)?'block':'none';
-    finalPage.style.display = (step===5)?'block':'none';
-    window.scrollTo(0,0);
-    if (step === 4) setTimeout(resizeAll, 50); // 進入簽名頁時重繪canvas
+// ------- LANGDATA -------
+const LANGDATA = {
+  siteTitle: {
+    'zh-TW': "舞岩抱石攀岩館",
+    en: "Rockdance Bouldering Gym",
+    ja: "ボルダリングジム 舞岩"
+  },
+  pageTitle1: {
+    'zh-TW': "責任與風險承擔同意書",
+    en: "Waiver of Liability and Assumption of Risk Agreement",
+    ja: "《責任及びリスク受諾同意書》"
+  },
+  pageTitle2: {
+    'zh-TW': "入場須知與安全守則",
+    en: "Admission Guide and Safety Rules",
+    ja: "《入場案内および安全ルール》"
+  },
+  pageTitle3: {
+    'zh-TW': "基本資料填寫",
+    en: "Personal Information",
+    ja: "基本情報の記入"
+  },
+  pageTitle4: {
+    'zh-TW': "電子簽名確認",
+    en: "Signature Confirmation",
+    ja: "電子署名確認"
+  },
+  terms1: {
+    'zh-TW': `<h3>《責任與風險承擔同意書》</h3>
+<div class="sub-desc">為了確保您的安全與知情權，請詳閱本同意書內容。</div>
+<h4>一、活動風險告知</h4>
+<div class="sub-desc">本人知悉並理解參與攀岩或相關運動具有以下潛在風險，包括但不限於：</div>
+<ul>
+  <li>身體損傷（如扭傷、拉傷、骨折、瘀青、擦傷等）</li>
+  <li>器材使用不當</li>
+  <li>與他人碰撞或場地內意外</li>
+  <li>任何因參與本活動而導致的心理或身體不適</li>
+</ul>
+<div class="sub-desc">本人理解即使遵守所有安全規定，這些風險無法完全避免，且本人願意自行承擔所有風險。</div>
+<h4>二、參與者聲明</h4>
+<ol>
+  <li>本人保證身心健康，無不適合從事劇烈運動之疾病或心理問題（如心臟病、癲癇、懷孕等）。</li>
+  <li>本人將遵守工作人員指示與安全規範，不進行危險行為或未經授權之操作。</li>
+  <li>本人同意在攀岩過程中隨時注意自身及他人的安全，並遵守基本的攀岩禮節和場館安全規範。在攀爬過程中，若發現安全隱患或不適，將立即停止並向場館工作人員報告。</li>
+  <li>本人已完整閱讀並理解活動規則及風險說明，願意自行承擔活動中可能產生之風險與責任。</li>
+</ol>
+<h4>三、免責與賠償聲明</h4>
+<ol>
+  <li>本人同意如因本人行為不當、違反規定、個人疏忽或其他非場地方責任因素所導致之任何事故、傷害、財物損失，將自行負責，並放棄對舞岩抱石攀岩館館方、教練或工作人員之一切追訴或賠償要求。</li>
+  <li>如本人行為導致第三人受損害，願意自行負擔相應賠償責任。</li>
+  <li>舞岩抱石攀岩館提供基本的場地保險，該保險僅涵蓋場館內設施的意外責任，不涵蓋參與者個人健康或意外風險。建議參與者自行投保額外的運動意外險以增加保障。</li>
+</ol>
+<h4>四、個人資料使用</h4>
+<div class="sub-desc">本人同意舞岩抱石攀岩館有權拍攝本人參與活動過程中的照片及影像，並可將其用於紀錄、宣傳或其他商業用途。如不同意該用途，本人將提前通知工作人員。</div>`,
+    en: `<h3>Waiver of Liability and Assumption of Risk Agreement</h3>
+<div class="sub-desc">To ensure your safety and right to information, please read this agreement carefully.</div>
+<h4>1. Notice of Activity Risks</h4>
+<div class="sub-desc">I acknowledge and understand that participating in climbing or related activities involves the following potential risks, including but not limited to:</div>
+<ul>
+  <li>Physical injuries (such as sprains, strains, fractures, bruises, abrasions, etc.)</li>
+  <li>Improper use of equipment</li>
+  <li>Collisions with others or accidents within the facility</li>
+  <li>Any physical or mental discomfort resulting from participation in this activity</li>
+</ul>
+<div class="sub-desc">I understand that these risks cannot be completely eliminated even if all safety regulations are followed, and I voluntarily assume all such risks.</div>
+<h4>2. Participant Declaration</h4>
+<ol>
+  <li>I certify that I am physically and mentally healthy and do not have any medical conditions or psychological issues that would make me unsuitable for strenuous activities (such as heart disease, epilepsy, pregnancy, etc.).</li>
+  <li>I will follow the instructions of the staff and all safety regulations, and will not engage in dangerous behaviors or unauthorized actions.</li>
+  <li>I agree to always pay attention to my own safety and the safety of others while climbing, and to abide by basic climbing etiquette and facility safety regulations. If I notice any safety hazards or feel unwell during climbing, I will immediately stop and report to the staff.</li>
+  <li>I have fully read and understood the activity rules and risk explanations, and agree to assume all potential risks and responsibilities associated with the activity.</li>
+</ol>
+<h4>3. Disclaimer and Compensation Statement</h4>
+<ol>
+  <li>I agree that I am personally responsible for any accidents, injuries, or property loss resulting from my own misconduct, violation of rules, personal negligence, or any other reasons not attributable to the facility. I waive any claims or compensation against the gym, coaches, or staff.</li>
+  <li>If my actions cause harm to a third party, I agree to bear the corresponding liability for compensation.</li>
+  <li>The gym provides only basic facility insurance, which covers accidents related to the facility equipment and does not cover personal health or accident risks of participants. Participants are advised to purchase additional personal accident insurance for greater protection.</li>
+</ol>
+<h4>4. Use of Personal Information</h4>
+<div class="sub-desc">I consent to the gym photographing or recording me during activities and using such photos or videos for documentation, promotion, or other commercial purposes. If I do not agree to such use, I will notify the staff in advance.</div>`,
+    ja: `<h3>《責任及びリスク受諾同意書》</h3>
+<div class="sub-desc">お客様の安全とご理解のため、必ず本同意書の内容をご確認ください。</div>
+<h4>一、活動リスクについて</h4>
+<div class="sub-desc">私は、ボルダリングまたは関連するスポーツに参加することにより、下記のようなリスクがあることを十分に理解しております（これらに限定されません）：</div>
+<ul>
+  <li>身体的なけが（捻挫、筋肉の損傷、骨折、打撲、擦り傷など）</li>
+  <li>器具の誤った使用</li>
+  <li>他の利用者との接触や施設内での事故</li>
+  <li>本活動への参加による心身の不調</li>
+</ul>
+<div class="sub-desc">全ての安全ルールを守った場合でも、これらのリスクを完全に回避できないことを承知し、自己責任のもと参加いたします。</div>
+<h4>二、参加者の誓約</h4>
+<ol>
+  <li>私は心身ともに健康であり、激しい運動に不適切な持病や精神的な問題（心臓病、てんかん、妊娠等）はありません。</li>
+  <li>スタッフの指示や安全ルールを遵守し、危険な行為や無断での操作は行いません。</li>
+  <li>クライミング中は常に自分自身および他の利用者の安全に配慮し、基本的なマナーや施設の安全ルールを守ります。登攀中に危険を感じたり体調不良が生じた場合は、直ちに活動を中止しスタッフに報告いたします。</li>
+  <li>活動ルールやリスクについて全て理解した上で、発生しうるリスクや責任を自己の責任として受け入れます。</li>
+</ol>
+<h4>三、免責事項及び賠償責任</h4>
+<ol>
+  <li>私の不適切な行為、ルール違反、個人的な過失、または施設側の責任によらない要因によって発生した事故・けが・財産損失については、自己責任とし、舞岩ボルダリングジムならびにスタッフ・インストラクターに対し、一切の損害賠償請求を行いません。</li>
+  <li>私の行為によって第三者に損害を与えた場合、相応の賠償責任を負うことに同意します。</li>
+  <li>舞岩ボルダリングジムでは基本的な施設保険のみを付保しておりますが、この保険は施設内設備に関する事故のみを対象としており、利用者の個人の健康や怪我、その他のリスクは含まれません。より幅広い補償を希望される場合は、ご自身でスポーツ傷害保険等にご加入ください。</li>
+</ol>
+<h4>四、個人情報の取り扱い</h4>
+<div class="sub-desc">私は、舞岩ボルダリングジムがイベント中に撮影した写真や映像を、記録・広報・その他商業目的で使用することに同意します。これらの用途に同意しない場合は、事前にスタッフまでお申し出ください。</div>`
+  },
+  terms2: {
+    'zh-TW': `<h3>《入場須知與安全守則》</h3>
+<div class="sub-desc">舞岩抱石攀岩館（以下簡稱本館）致力於為使用者打造一個安全的攀登環境，為維護每位攀登者的健康與安全，並確保場館內的秩序與規範，所有進入本館的使用者必須詳細閱讀並遵守本守則，以確保自身及他人之安全。</div>
+<ul>
+  <li>入館前請完成登記與付費，攀登者請務必向工作人員確認安全墜落姿勢。</li>
+  <li>除攀岩體驗外，5歲以下不得參與攀岩活動；未滿9歲（或未滿國小三年級）之兒童，必須由家長或法定監護人陪同負責其安全；未滿18歲者需由監護人簽署同意書。</li>
+  <li>進行抱石活動時，請著攀岩鞋，不得赤腳攀爬。</li>
+  <li>攀登區禁止飲食。水壺請放置於指定之位置。</li>
+  <li>請勿將物品放於軟墊上。</li>
+  <li>本館全面禁煙、口香糖、檳榔及含酒精飲料。</li>
+  <li>本館內嚴禁奔跑、打鬧或玩耍。</li>
+  <li>通過攀登區時，應隨時注意岩牆上之攀登者動向，在不影響攀登者的情況下盡速通過。</li>
+  <li>嚴禁在軟墊上逗留。</li>
+  <li>攀登者應根據自身身體狀況進行攀爬，避免超過身體極限負荷，並確實熱身與收操，以防運動傷害。</li>
+  <li>攀岩過程中，除自身安全外，也須注意他人的安全，並隨時注意他人的攀爬動向，避免發生撞擊危險。</li>
+  <li>請依照「安全墜落」之觀念進行墜落，且避免墜落於軟墊邊緣，以免發生危險。</li>
+  <li>若有發現岩塊鬆動或是其他設施異常，請立即通知現場工作人員。</li>
+  <li>非本館工作人員，請勿拆除或轉動岩塊。</li>
+  <li>蓄意破壞或盜竊館設備，除依法嚴辦外，須照價賠償。</li>
+  <li>本館禁止進行私人教學行為。</li>
+  <li>請勿攜帶本館工作人員認定之危險物品入館。</li>
+  <li>若發現有參與者違反安全使用規範或不遵守場館規範，工作人員可隨時進行制止，並視情況進行必要的處理。</li>
+  <li>以上若有未盡事宜，本館工作人員得依現場狀況做適當處置，並修改相關辦法。</li>
+</ul>
+`,
+    en: `<h3>Admission Guide and Safety Rules</h3>
+<div class="sub-desc">Muyan Bouldering Gym (hereinafter referred to as "the Gym") is committed to providing a safe climbing environment for all users. To ensure the health and safety of every climber, as well as to maintain order and compliance within the facility, all users entering the Gym must carefully read and comply with the following rules to ensure their own safety and the safety of others.</div>
+<ul>
+  <li>Please complete registration and payment before entering. Climbers must confirm the correct falling technique with staff.</li>
+  <li>Except for climbing experience sessions, children under 5 years old are not permitted to participate in climbing activities. Children under 9 years old (or below third grade in elementary school) must be accompanied by a parent or legal guardian, who is responsible for their safety. Participants under 18 years old must have a consent form signed by a guardian.</li>
+  <li>Climbing shoes must be worn during bouldering activities. Barefoot climbing is prohibited.</li>
+  <li>No food or drink is allowed in the climbing area. Please place water bottles in the designated area.</li>
+  <li>Do not place any items on the mats.</li>
+  <li>The entire facility is non-smoking. Chewing gum, betel nut, and alcoholic beverages are prohibited.</li>
+  <li>Running, horseplay, or games are strictly prohibited within the facility.</li>
+  <li>When passing through the climbing area, always be aware of climbers on the wall and pass quickly without interfering with their activity.</li>
+  <li>Staying on the mats is strictly prohibited.</li>
+  <li>Climbers should climb within their physical limits, warm up and cool down adequately, and avoid exceeding their own capacity to prevent injuries.</li>
+  <li>During climbing, in addition to ensuring your own safety, always be mindful of the safety of others and observe their movements to avoid collisions.</li>
+  <li>Practice "safe falling" techniques and avoid falling at the edges of the mats to prevent accidents.</li>
+  <li>If you notice any loose holds or other equipment abnormalities, please notify staff immediately.</li>
+  <li>Do not remove or rotate holds unless you are a staff member.</li>
+  <li>Deliberate damage to or theft of facility equipment will result in legal action and compensation at full value.</li>
+  <li>Private instruction is not allowed without the Gym's permission.</li>
+  <li>Do not bring dangerous items into the Gym as determined by staff.</li>
+  <li>If any user violates safety or facility rules, staff may stop them immediately and take necessary action as appropriate.</li>
+  <li>For matters not covered above, staff may handle the situation and amend related regulations as needed according to the circumstances.</li>
+</ul>
+`,
+    ja: `<h3>《入場案内および安全ルール》</h3>
+<div class="sub-desc">舞岩ボルダリングジム（以下「当ジム」といいます）は、ご利用者の皆様に安全なクライミング環境を提供することに努めております。ご利用者全員の健康と安全を守り、施設内の秩序と規則を維持するため、当ジムに入館されるすべての方は、必ず以下の規則をよく読み、遵守してください。ご自身および他の方々の安全確保のため、ご協力をお願いいたします。</div>
+<ul>
+  <li>入館前に必ず受付・お支払いをお済ませのうえ、登攀者はスタッフと共に安全な落下姿勢をご確認ください。</li>
+  <li>クライミング体験を除き、5歳未満のお子様はクライミング活動に参加できません。9歳未満（または小学校3年生未満）の児童は、必ず保護者または法定代理人が付き添い、その安全に責任を持ってください。18歳未満の方は、保護者の同意書が必要です。</li>
+  <li>ボルダリング活動の際は必ずクライミングシューズをご着用ください。裸足での登攀は禁止です。</li>
+  <li>登攀エリア内での飲食は禁止です。水筒等は指定された場所に置いてください。</li>
+  <li>マットの上に物を置かないでください。</li>
+  <li>館内は全面禁煙です。また、ガム、ビンロウ、アルコール飲料の持ち込みは禁止です。</li>
+  <li>館内での走行、ふざけ、遊戯は禁止です。</li>
+  <li>クライミングエリアを通行する際は、壁上の登攀者の動きに注意し、登攀者の妨げとならないよう速やかに通過してください。</li>
+  <li>マットの上での滞留は禁止です。</li>
+  <li>登攀者は自身の体調や体力に応じてクライミングを行い、無理のない範囲でご利用ください。十分なウォーミングアップとクールダウンを行い、怪我の防止に努めてください。</li>
+  <li>クライミング中は自身のみならず、他の登攀者の安全にも常に注意し、他の方の動きをよくご確認ください。衝突などの危険を避けるためご協力をお願いします。</li>
+  <li>「安全な落下」を意識し、マットの端での落下は危険ですので避けてください。</li>
+  <li>ホールドの緩みや施設の異常を発見した場合は、速やかにスタッフにお知らせください。</li>
+  <li>スタッフ以外の方はホールドの取り外しや回転を行わないでください。</li>
+  <li>設備の故意による破損や盗難があった場合は、法的措置に加え、実費を弁償していただきます。</li>
+  <li>当ジムでは無断の個人指導行為を禁止しております。</li>
+  <li>スタッフが危険と判断した物品の持ち込みは禁止です。</li>
+  <li>規則違反や安全基準を守らない場合、スタッフがその場で制止し、必要に応じて対処いたします。</li>
+  <li>上記以外にも、スタッフが現場の状況に応じて適切に対応し、必要に応じて規則の改定を行う場合があります。</li>
+</ul>
+`
+  },
+  agree1text: {
+    'zh-TW': "我已詳細閱讀並同意上述條款內容",
+    en: "I have read and agree to the above terms",
+    ja: "上記の内容をよく読み、同意しました"
+  },
+  agree2text: {
+    'zh-TW': "我已知悉並同意遵守入場須知與安全守則",
+    en: "I have read and agree to comply with the admission and safety rules",
+    ja: "入場案内および安全ルールを理解し、遵守します"
+  },
+  labelName: { 'zh-TW': "姓名", en: "Name", ja: "氏名" },
+  labelIdnumber: { 'zh-TW': "身分證字號", en: "ID Number", ja: "身分証番号" },
+  labelGender: { 'zh-TW': "性別", en: "Gender", ja: "性別" },
+  genderM: { 'zh-TW': "男", en: "Male", ja: "男性" },
+  genderF: { 'zh-TW': "女", en: "Female", ja: "女性" },
+  labelDob: { 'zh-TW': "出生年月日", en: "Date of Birth", ja: "生年月日" },
+  labelPhone: { 'zh-TW': "連絡電話", en: "Phone Number", ja: "連絡先電話番号" },
+  labelEmgContact: { 'zh-TW': "緊急聯絡人", en: "Emergency Contact", ja: "緊急連絡先" },
+  labelEmgRelation: { 'zh-TW': "緊急聯絡人關係", en: "Relationship to Emergency Contact", ja: "緊急連絡先との関係" },
+  labelEmgPhone: { 'zh-TW': "緊急聯絡人電話", en: "Emergency Contact Phone Number", ja: "緊急連絡先電話番号" },
+  labelSign1: { 'zh-TW': "參與者簽名（必填）", en: "Signature of Participant (Required)", ja: "参加者署名（必須）" },
+  labelSign2: { 'zh-TW': "家長／監護人簽名（如未滿18歲必填）", en: "Signature of Guardian (Required if under 18)", ja: "保護者署名（18歳未満の場合必須）" },
+  clearSign: { 'zh-TW': "清除簽名", en: "Clear Signature", ja: "署名を消去" },
+  submitBtn: { 'zh-TW': "送出", en: "Submit", ja: "送信" },
+  errFill: { 'zh-TW': "請完整填寫所有資料", en: "Please complete all required fields", ja: "すべての項目を正しくご記入ください" },
+  errGender: { 'zh-TW': "請選擇性別", en: "Please select gender", ja: "性別を選択してください" },
+  errSign1: { 'zh-TW': "請參與者簽名", en: "Participant's signature is required", ja: "参加者の署名が必要です" },
+  errSign2: { 'zh-TW': "未滿18歲必須由家長／監護人簽名", en: "If under 18, guardian's signature is required", ja: "18歳未満の場合は保護者の署名が必要です" },
+  errFail: { 'zh-TW': "送出失敗，請稍後再試", en: "Submission failed, please try again later", ja: "送信に失敗しました。しばらくしてから再度お試しください" },
+  errError: { 'zh-TW': "送出過程發生錯誤", en: "An error occurred during submission", ja: "送信中にエラーが発生しました" },
+  successTitle: { 'zh-TW': "已成功送出！", en: "Submission Successful!", ja: "送信が完了しました！" },
+  successMsg: {
+    'zh-TW': "感謝您填寫同意書，<br>祝您攀登愉快、平安順利！",
+    en: "Thank you for completing the waiver. <br>Have a safe and enjoyable climb!",
+    ja: "同意書のご記入ありがとうございます。<br>安全で楽しいクライミングを！"
+  },
+  moreBtn: { 'zh-TW': "提交更多資料", en: "Submit Another", ja: "追加で記入する" },
+  dobFormatTip: {
+    'zh-TW': '格式：年-月-日（如 2015-08-25）',
+    en: 'Format: YYYY-MM-DD (e.g. 2015-08-25)',
+    ja: '形式：YYYY-MM-DD（例：2015-08-25）'
   }
-  document.getElementById('to-step-2').onclick = function() {
-    if(!document.getElementById('agree1').checked){
-      alert('請勾選同意後才能繼續');
-      return;
-    }
-    showStep(2);
-  };
-  document.getElementById('to-step-1').onclick = function() { showStep(1); };
-  document.getElementById('to-step-3').onclick = function() {
-    if(!document.getElementById('agree2').checked){
-      alert('請勾選同意後才能繼續');
-      return;
-    }
-    showStep(3);
-  };
-  document.getElementById('to-step-2b').onclick = function() { showStep(2); };
-  document.getElementById('to-step-4').onclick = function() {
-    const fields = [
-      'name','idnumber','dob','phone','emergency_contact','emergency_relation','emergency_phone'
-    ];
-    for(let id of fields){
-      if(!document.getElementById(id).value){
-        document.getElementById(id).focus();
-        alert('請完整填寫所有資料');
-        return;
-      }
-    }
-    if(!document.querySelector('input[name="gender"]:checked')){
-      alert('請選擇性別');
-      return;
-    }
-    showStep(4);
-  };
-  document.getElementById('to-step-3b').onclick = function() { showStep(3); };
+};
 
-  // --- 簽名區 ---
-  let signaturePad1, signaturePad2, canvas1, canvas2;
-  function resizeCanvas(canvas, pad) {
-    const ratio = Math.max(window.devicePixelRatio || 1, 1);
-    canvas.width = canvas.offsetWidth * ratio;
-    canvas.height = 120 * ratio;
-    canvas.style.height = "120px";
-    canvas.style.width = "100%";
-    canvas.getContext('2d').scale(ratio, ratio);
-    pad.clear();
-  }
-  function resizeAll() {
-    resizeCanvas(canvas1, signaturePad1);
-    resizeCanvas(canvas2, signaturePad2);
-  }
-  window.onload = function() {
-    canvas1 = document.getElementById('signature1');
-    canvas2 = document.getElementById('signature2');
-    signaturePad1 = new SignaturePad(canvas1);
-    signaturePad2 = new SignaturePad(canvas2);
-    window.addEventListener('resize', resizeAll);
-    setTimeout(resizeAll, 200);
-    document.getElementById('clear1').onclick = ()=>signaturePad1.clear();
-    document.getElementById('clear2').onclick = ()=>signaturePad2.clear();
-  };
-
-  // 條款框滑到底/頂時自動傳遞給頁面（最佳自然體驗）
-document.querySelectorAll('.terms-block').forEach(function(block){
-  block.addEventListener('touchstart', function(e){
-    this._startY = e.touches[0].clientY;
-  }, {passive:true});
-  block.addEventListener('touchmove', function(e){
-    const el = this;
-    const scrollTop = el.scrollTop;
-    const scrollHeight = el.scrollHeight;
-    const offsetHeight = el.offsetHeight;
-    const atTop = scrollTop === 0;
-    const atBottom = scrollTop + offsetHeight >= scrollHeight - 1;
-    const currentY = e.touches[0].clientY;
-    const up = (currentY > el._startY);
-    const down = (currentY < el._startY);
-
-    // 只有不是在頂/底時，才攔截事件，不然讓事件自然冒泡給頁面
-    if (!((atTop && up) || (atBottom && down))) {
-      e.stopPropagation();
-    }
-  }, {passive:false});
+// ------- 主程式 -------
+let currentLang = 'zh-TW', signaturePad1, signaturePad2;
+function resizeAndPreserveSignature(pad, canvas) {
+  const data = pad ? pad.toData() : [];
+  resizeCanvas(canvas);
+  if (pad) pad.clear();
+  let npad = new SignaturePad(canvas, { backgroundColor: "#fff" });
+  if (data && data.length) npad.fromData(data);
+  canvas.style.touchAction = "none";
+  canvas.onselectstart = ()=>false;
+  canvas.onmousedown = ()=>false;
+  return npad;
+}
+function setLang(lang) {
+  currentLang = lang;
+  document.documentElement.lang = lang;
+  document.getElementById("siteTitle").innerText = LANGDATA.siteTitle[lang];
+  document.getElementById("pageTitle1").innerText = LANGDATA.pageTitle1[lang];
+  document.getElementById("terms1").innerHTML = LANGDATA.terms1[lang];
+  document.getElementById("agree1text").innerText = LANGDATA.agree1text[lang];
+  document.getElementById("pageTitle2").innerText = LANGDATA.pageTitle2[lang];
+  document.getElementById("terms2").innerHTML = LANGDATA.terms2[lang];
+  document.getElementById("agree2text").innerText = LANGDATA.agree2text[lang];
+  document.getElementById("pageTitle3").innerText = LANGDATA.pageTitle3[lang];
+  document.getElementById("labelName").innerText = LANGDATA.labelName[lang];
+  document.getElementById("labelIdnumber").innerText = LANGDATA.labelIdnumber[lang];
+  document.getElementById("labelGender").innerText = LANGDATA.labelGender[lang];
+  document.getElementById("labelDob").innerText = LANGDATA.labelDob[lang];
+  document.getElementById("dobFormatTip").innerText = LANGDATA.dobFormatTip[lang];
+  document.getElementById("labelPhone").innerText = LANGDATA.labelPhone[lang];
+  document.getElementById("labelEmgContact").innerText = LANGDATA.labelEmgContact[lang];
+  document.getElementById("labelEmgRelation").innerText = LANGDATA.labelEmgRelation[lang];
+  document.getElementById("labelEmgPhone").innerText = LANGDATA.labelEmgPhone[lang];
+  document.getElementById("genderMText").innerText = LANGDATA.genderM[lang];
+  document.getElementById("genderFText").innerText = LANGDATA.genderF[lang];
+  document.getElementById("pageTitle4").innerText = LANGDATA.pageTitle4[lang];
+  document.getElementById("labelSign1").innerText = LANGDATA.labelSign1[lang];
+  document.getElementById("labelSign2").innerText = LANGDATA.labelSign2[lang];
+  document.getElementById("clear1").innerText = LANGDATA.clearSign[lang];
+  document.getElementById("clear2").innerText = LANGDATA.clearSign[lang];
+  document.getElementById("submitBtn").innerText = LANGDATA.submitBtn[lang];
+  document.getElementById("successTitle").innerText = LANGDATA.successTitle[lang];
+  document.getElementById("successMsg").innerHTML = LANGDATA.successMsg[lang];
+  document.getElementById("more-btn").innerText = LANGDATA.moreBtn[lang];
+  if(lang==='en') document.getElementById("dob").setAttribute('lang', 'en');
+  else if(lang==='ja') document.getElementById("dob").setAttribute('lang', 'ja');
+  else document.getElementById("dob").setAttribute('lang', 'zh-Hant');
+  window.scrollTo({ top: 0, behavior: "auto" }); // <--- 新增語言切換回頂部
+  // 如果目前在簽名頁，也要 re-init canvas，確保可簽
+  if (document.getElementById("step-4").style.display === "block") reinitSignaturePads();
+}
+document.getElementById("langSwitcher").addEventListener('change', function(){
+  setLang(this.value);
 });
-
-
-  // 判斷年齡（未滿18必簽家長）
-  function isMinor() {
-    const dob = document.getElementById('dob').value;
-    if(!dob) return false;
-    const today = new Date();
-    const birth = new Date(dob);
-    let age = today.getFullYear() - birth.getFullYear();
-    if(today.getMonth()<birth.getMonth()||(today.getMonth()===birth.getMonth()&&today.getDate()<birth.getDate())){
-      age--;
-    }
-    return age < 18;
+function showStep(step) {
+  for(let i=1;i<=4;i++) document.getElementById(`step-${i}`).style.display = (i===step)?'block':'none';
+  document.getElementById("final-page").style.display = (step===5)?'block':'none';
+  document.getElementById("langSwitcherRow").style.display = (step===1)?'flex':'none';
+  window.scrollTo({ top: 0, behavior: "auto" });
+  // 只有進入簽名頁時才 re-init 簽名版
+  if(step===4) reinitSignaturePads();
+}
+function reinitSignaturePads() {
+  let canvas1 = document.getElementById('signature1');
+  let canvas2 = document.getElementById('signature2');
+  signaturePad1 = resizeAndPreserveSignature(signaturePad1, canvas1);
+  signaturePad2 = resizeAndPreserveSignature(signaturePad2, canvas2);
+  document.getElementById("clear1").onclick = ()=> signaturePad1.clear();
+  document.getElementById("clear2").onclick = ()=> signaturePad2.clear();
+}
+document.getElementById("to-step-2").onclick = () => {
+  if(!document.getElementById("agree1").checked) return alert(LANGDATA.errFill[currentLang]);
+  showStep(2);
+}
+document.getElementById("to-step-1").onclick = () => showStep(1);
+document.getElementById("to-step-3").onclick = () => {
+  if(!document.getElementById("agree2").checked) return alert(LANGDATA.errFill[currentLang]);
+  showStep(3);
+}
+document.getElementById("to-step-2b").onclick = () => showStep(2);
+document.getElementById("to-step-4").onclick = () => {
+  if(
+    !document.getElementById("name").value ||
+    !document.getElementById("idnumber").value ||
+    !document.querySelector('input[name="gender"]:checked') ||
+    !document.getElementById("dob").value ||
+    !document.getElementById("phone").value ||
+    !document.getElementById("emergency_contact").value ||
+    !document.getElementById("emergency_relation").value ||
+    !document.getElementById("emergency_phone").value
+  ) {
+    alert(LANGDATA.errFill[currentLang]); return;
   }
-
-  // --- 表單送出 ---
-  document.getElementById('waiverForm').onsubmit = async function(e) {
-    e.preventDefault();
-    if(signaturePad1.isEmpty()){
-      alert('請參與者簽名');
-      return;
-    }
-    if(isMinor() && signaturePad2.isEmpty()){
-      alert('未滿18歲必須由家長／監護人簽名');
-      return;
-    }
-    // 組資料
-    const formData = new FormData();
-    formData.append('姓名', document.getElementById('name').value);
-    formData.append('身分證字號', document.getElementById('idnumber').value);
-    formData.append('性別', document.querySelector('input[name="gender"]:checked').value);
-    formData.append('出生年月日', document.getElementById('dob').value);
-    formData.append('連絡電話', document.getElementById('phone').value);
-    formData.append('緊急聯絡人', document.getElementById('emergency_contact').value);
-    formData.append('緊急聯絡人關係', document.getElementById('emergency_relation').value);
-    formData.append('緊急聯絡人電話', document.getElementById('emergency_phone').value);
-    formData.append('條款1同意', document.getElementById('agree1').checked ? '同意' : '');
-    formData.append('條款2同意', document.getElementById('agree2').checked ? '同意' : '');
-    formData.append('參與者簽名', signaturePad1.toDataURL());
-    formData.append('家長簽名', signaturePad2.isEmpty() ? '' : signaturePad2.toDataURL());
-    // Google Apps Script 網址
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbyAPGl3J0Ntz0FNWvCWiAL6NH6rmBEim6R9p50xrKTgUDPurGF_jzA1KTTuhLRmQGZ_/exec';
-    try{
-      const res = await fetch(scriptURL, { method:'POST', body:formData });
-      if(res.ok){
-        showStep(5); // 跳到成功頁
-        document.getElementById('waiverForm').reset();
-        signaturePad1.clear();
-        signaturePad2.clear();
-      }else{
-        alert('送出失敗，請稍後再試');
-      }
-    }catch(err){
-      alert('送出過程發生錯誤');
-    }
+  showStep(4);
+}
+document.getElementById("to-step-3b").onclick = () => showStep(3);
+document.getElementById("more-btn").onclick = () => window.location.reload();
+function resizeCanvas(canvas) {
+  let ratio = Math.max(window.devicePixelRatio || 1, 1);
+  canvas.width = canvas.offsetWidth * ratio;
+  canvas.height = canvas.offsetHeight * ratio;
+  canvas.getContext("2d").scale(ratio, ratio);
+}
+window.onload = function() {
+  setLang('zh-TW');
+  showStep(1);
+  let canvas1 = document.getElementById('signature1');
+  let canvas2 = document.getElementById('signature2');
+  resizeCanvas(canvas1); resizeCanvas(canvas2);
+  signaturePad1 = new SignaturePad(canvas1, {backgroundColor: "#fff"});
+  signaturePad2 = new SignaturePad(canvas2, {backgroundColor: "#fff"});
+  canvas1.style.touchAction = "none";
+  canvas2.style.touchAction = "none";
+  canvas1.onselectstart = canvas2.onselectstart = ()=>false;
+  canvas1.onmousedown = canvas2.onmousedown = ()=>false;
+  document.getElementById("clear1").onclick = ()=> signaturePad1.clear();
+  document.getElementById("clear2").onclick = ()=> signaturePad2.clear();
+  window.addEventListener('resize', ()=>{
+    reinitSignaturePads();
+  });
+};
+document.getElementById("waiverForm").onsubmit = async function(e) {
+  e.preventDefault();
+  if(signaturePad1.isEmpty()) { alert(LANGDATA.errSign1[currentLang]); return false; }
+  let dob = document.getElementById("dob").value;
+  let age = 0;
+  if(dob) {
+    let birth = new Date(dob);
+    let today = new Date();
+    age = today.getFullYear() - birth.getFullYear();
+    let m = today.getMonth() - birth.getMonth();
+    if(m<0 || (m===0 && today.getDate()<birth.getDate())) age--;
+  }
+  if(age<18 && signaturePad2.isEmpty()) { alert(LANGDATA.errSign2[currentLang]); return false; }
+  let data = {
+    lang: currentLang,
+    name: document.getElementById("name").value,
+    idnumber: document.getElementById("idnumber").value,
+    gender: document.querySelector('input[name="gender"]:checked')?.value || '',
+    dob: dob,
+    phone: document.getElementById("phone").value,
+    emergency_contact: document.getElementById("emergency_contact").value,
+    emergency_relation: document.getElementById("emergency_relation").value,
+    emergency_phone: document.getElementById("emergency_phone").value,
+    signature1: signaturePad1.toDataURL(),
+    signature2: signaturePad2.toDataURL(),
+    agree1: document.getElementById("agree1").checked ? "Y" : "N",
+    agree2: document.getElementById("agree2").checked ? "Y" : "N"
   };
-
-  // 成功頁：再填一份
-  document.getElementById('more-btn').onclick = function() {
-    showStep(1);
-  };
+  let url = "YOUR_GOOGLE_APPS_SCRIPT_URL";
+  try {
+    let res = await fetch(url, {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: {'Content-Type':'application/json'}
+    });
+    let txt = await res.text();
+    if(res.ok && (txt.trim() === "OK" || txt.toLowerCase().includes("success"))) {
+      showStep(5);
+      return false;
+    } else {
+      alert(LANGDATA.errFail[currentLang] + "\n" + txt);
+      return false;
+    }
+  } catch(err) {
+    alert(LANGDATA.errError[currentLang]);
+    return false;
+  }
+}
 </script>
 </body>
 </html>
