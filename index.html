@@ -548,29 +548,28 @@ document.getElementById("waiverForm").onsubmit = async function (e) {
     return false;
   }
 
-  // 取得資料
-  const data = {
-    lang: currentLang,
-    name: document.getElementById("name").value.trim(),
-    idnumber: document.getElementById("idnumber").value.trim(),
-    gender: document.querySelector('input[name="gender"]:checked')?.value || '',
-    dob: dob,
-    phone: document.getElementById("phone").value.trim(),
-    emergency_contact: document.getElementById("emergency_contact").value.trim(),
-    emergency_relation: document.getElementById("emergency_relation").value.trim(),
-    emergency_phone: document.getElementById("emergency_phone").value.trim(),
-    signature1: signaturePad1.toDataURL(),
-    signature2: signaturePad2.toDataURL(),
-    agree1: document.getElementById("agree1").checked ? "Y" : "N",
-    agree2: document.getElementById("agree2").checked ? "Y" : "N"
-  };
+  // 使用 FormData 傳送資料
+  const formData = new FormData();
+  formData.append("lang", currentLang);
+  formData.append("姓名", document.getElementById("name").value.trim());
+  formData.append("身分證字號", document.getElementById("idnumber").value.trim());
+  formData.append("性別", document.querySelector('input[name="gender"]:checked')?.value || '');
+  formData.append("出生年月日", dob);
+  formData.append("連絡電話", document.getElementById("phone").value.trim());
+  formData.append("緊急聯絡人", document.getElementById("emergency_contact").value.trim());
+  formData.append("緊急聯絡人關係", document.getElementById("emergency_relation").value.trim());
+  formData.append("緊急聯絡人電話", document.getElementById("emergency_phone").value.trim());
+  formData.append("參與者簽名", signaturePad1.toDataURL());
+  formData.append("家長監護人簽名", signaturePad2.toDataURL());
+  formData.append("同意條款1", document.getElementById("agree1").checked ? "Y" : "N");
+  formData.append("同意條款2", document.getElementById("agree2").checked ? "Y" : "N");
 
   const url = 'https://script.google.com/macros/s/AKfycbyAPGl3J0Ntz0FNWvCWiAL6NH6rmBEim6R9p50xrKTgUDPurGF_jzA1KTTuhLRmQGZ_/exec';
+
   try {
     const res = await fetch(url, {
       method: "POST",
-      body: JSON.stringify(data),
-      headers: { 'Content-Type': 'application/json' }
+      body: formData
     });
     const txt = await res.text();
     if (res.ok && (txt.trim() === "OK" || txt.toLowerCase().includes("success"))) {
