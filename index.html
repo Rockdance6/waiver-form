@@ -12,10 +12,10 @@
   .site-title { text-align:center; color:#2064bb; font-size:2.6em; font-weight:900; margin-bottom:0.2em; margin-top:0;}
   h2.page-title { text-align:center; color:#2064bb; margin:0 0 1em 0; font-size:1.28em; font-weight:700;}
   .terms-block, .terms-block * { text-align:left !important; }
-  .terms-block { background:#e9f0fb; border-radius:10px; padding:1.6em 1.3em 1.3em 1.3em; margin-bottom:1.1em; font-size:1.11em;}
-  .terms-block h3, .terms-block h4 { color:#2064bb; margin-top:0.7em; }
+  .terms-block { background:#e9f0fb; border-radius:10px; padding:1.6em 1.3em 1.3em 1.3em; margin-bottom:1.1em; font-size:1.11em; color: #000000 !important;}
+  .terms-block h3, .terms-block h4 {  color:#2064bb !important; margin-top:0.7em; }
   .terms-block h3 { margin-bottom:0.2em; font-size:1.08em; border-left:4px solid #2064bb; padding-left:0.5em;}
-  .terms-block .sub-desc { margin:0.35em 0 0.9em 0.8em; color:#4a4c50; font-size:0.97em; line-height:1.7;}
+  .terms-block .sub-desc { margin:0.35em 0 0.9em 0.8em; color:#000000 !important; font-size:0.97em; line-height:1.7;}
   .terms-block ul, .terms-block ol { padding-left:1.4em; }
   .terms-block li { margin-bottom:0.44em;}
   .checkbox-block { background:#f7fbff; border-radius:8px; padding:1em 1.2em; margin-bottom:1.2em; }
@@ -564,7 +564,7 @@ document.getElementById("waiverForm").onsubmit = async function (e) {
   formData.append("同意條款1", document.getElementById("agree1").checked ? "Y" : "N");
   formData.append("同意條款2", document.getElementById("agree2").checked ? "Y" : "N");
 
-  const url = 'https://script.google.com/macros/library/d/1uCZamPWwwVkYyxGKWeVGdg_e53LVhfvF19wT120saDdNULSiw426-FZl/1';
+  const url = 'https://script.google.com/macros/s/AKfycbyAPGl3J0Ntz0FNWvCWiAL6NH6rmBEim6R9p50xrKTgUDPurGF_jzA1KTTuhLRmQGZ_/exec';
 
   try {
     const res = await fetch(url, {
